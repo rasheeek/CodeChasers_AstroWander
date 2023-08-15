@@ -1,0 +1,14 @@
+ion-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  ion-list{
+    width: 100%;
+    margin-top: 20px;
+    p{
+        margin : 3px 0 0;
+    }
+  }
+}
