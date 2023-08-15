@@ -1,0 +1,7 @@
+{
+  "name": "baylanka_planetTravel",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
