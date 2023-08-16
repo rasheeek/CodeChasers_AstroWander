@@ -27,19 +27,21 @@
     height: 150px;
     flex-shrink: 0;
     margin-top: 20px;
-    margin-left: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header {
     color: #FFF;
-    font-family: Poppins;
+    font-family: 'Poppins';
     font-size: 35px;
     font-style: normal;
     font-weight: 700;
     line-height: 125%;
     /* 43.75px */
     margin-top: 40px;
-    margin-left: 77px;
+    text-align: center;
 }
 
 .id {
@@ -52,8 +54,8 @@
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.35);
     background: rgba(255, 255, 255, 0.20);
-    margin-top: 40px;
-    margin-left: 45px;
+
+    margin: 40px auto auto auto;
     color: rgba(229, 184, 244, 0.50);
 
     /* Text input -1 */
@@ -69,7 +71,9 @@
     height: 240px;
     flex-shrink: 0;
     margin-top: 63px;
-    margin-left: 75px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
 }
 
