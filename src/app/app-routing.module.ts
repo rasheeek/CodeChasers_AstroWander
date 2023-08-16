@@ -16,6 +16,10 @@ const routes: Routes = [
   },  {
     path: 'planet-overview',
     loadChildren: () => import('./pages/planet-overview/planet-overview.module').then( m => m.PlanetOverviewPageModule)
+  },
+  {
+    path: 'search-crafts',
+    loadChildren: () => import('./pages/search-crafts/search-crafts.module').then( m => m.SearchCraftsPageModule)
   }
 
 ];

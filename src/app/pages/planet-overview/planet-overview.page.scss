@@ -1,0 +1,515 @@
+ion-content {
+    --background: linear-gradient(#2B1B59, #73298C);
+}
+
+.arrow-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--primary-color-1, #E5B8F4);
+}
+
+.planet-overview {
+    width: auto;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eclips-div {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    gap: 5px;
+    border-radius: 10px;
+    background: var(--slider-bg, rgba(125, 125, 125, 0.75));
+}
+
+h1 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    margin-left: 20px;
+    margin-bottom: 0px;
+}
+
+.planet-detail {
+    margin-left: 20px;
+}
+
+.about-flight {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.circle-icon {
+    width: 5px;
+    height: 5px;
+    color: #FFF;
+    margin: 0 5px;
+}
+
+.days {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.eclips-class {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+ion-img {
+    margin-right: 2px;
+}
+
+.rate-class1 {
+    color: var(--rated-color-circle, #FFD84D);
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.rate-class2 {
+    color: var(--rated-color-circle, #FFD84D);
+    font-family: Poppins;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    margin-left: 5px;
+    margin-top: 4px;
+}
+
+.btn-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 15px;
+}
+
+ion-button {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    --background: #2D033B;
+    text-transform: capitalize;
+    color: var(--primary-color-1, #E5B8F4);
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    --border-radius: 10px;
+}
+
+.selected-button {
+    --background: var(--primary-color-1, #E5B8F4);
+    color: #2D033B;
+}
+
+.about-heading {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 20px;
+}
+
+.about-content {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.continue-btn {
+    --background: #2D033B;
+    text-transform: capitalize;
+    color: var(--primary-color-1, #E5B8F4);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 15px;
+    display: flex;
+    width: 250px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.more-photos {
+    display: flex;
+    flex-direction: row;
+}
+
+.chevron-forward {
+    width: 24px;
+    height: 24px;
+    color: #FFF;
+    right: 15px;
+    position: absolute;
+}
+
+.planets-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.card {
+    display: flex;
+
+    .card-1 {
+        width: 270px;
+        height: 197px;
+        border-radius: 20px;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.about-type {
+    margin: 10px 10px 15px 30px;
+    display: flex;
+}
+
+.item-img {
+    width: 34px;
+    height: 34px;
+    border: none;
+    outline: none;
+}
+
+.item-heading {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.item-heading1 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+.item-heading2 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 114%;
+}
+
+.single-img {
+    width: 302px;
+    height: 225px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: url("../../../assets/ARTour.png");
+}
+
+.rating {
+    margin-left: 20px;
+}
+
+.rating-heading {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.review-class {
+    color: var(--rated-color-circle, #FFD84D);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 10px;
+}
+
+.yellow-circle {
+    width: 5px;
+    height: 5px;
+    color: var(--rated-color-circle, #FFD84D);
+    margin-right: 2px;
+    margin-bottom: 4px;
+}
+
+.name-class {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 5px;
+}
+
+.eclips-class2 {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.eclips {
+    width: 8px;
+    height: 8px;
+    margin-top: 5px;
+}
+
+.review-date {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 114%;
+    margin-left: 20px;
+}
+
+.rating-content {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.img-div {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-right: 20px;
+    gap: 5px;
+
+    ion-img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.details-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.details-card {
+    .card2 {
+        width: 250px;
+        height: 160px;
+        border-radius: 20px;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.img-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.card-heading-1 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.card-heading-2 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 114%;
+}
+
+.more-flights {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.about-flights {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.about-tips {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 114%;
+}
+
+.flights-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.flight-card {
+
+    .card-2 {
+        width: 160px;
+        height: 160px;
+        border-radius: 20px;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.flight-details {
+    margin-left: 15px;
+    margin-bottom: 35px;
+}
+
+.planet-detail2 {
+
+    .about-flight2 {
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 114%;
+        margin: 0;
+    }
+
+    .circle-icon2 {
+        width: 5px;
+        height: 5px;
+        color: #FFF;
+        margin: 0 5px;
+    }
+
+    .days2 {
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 114%;
+    }
+}
+
+.price {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 114%;
+}
+
+.trip-way {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 114%;
+    margin-left: 10px;
+}
+
+.fav-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.20);
+    background: #FFF;
+    margin-left: 115px;
+    margin-top: 117px;
+}
+
+.submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.book-btn {
+    --background: var(--primary-color-1, #E5B8F4);
+    text-transform: capitalize;
+    color: var(--primary-color-4, #2D033B);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    width: 250px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+}
