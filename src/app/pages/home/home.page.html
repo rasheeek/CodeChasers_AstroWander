@@ -1,13 +1,69 @@
-<ion-header [translucent]="true">
+<!-- <ion-header class="tab5-header ion-no-border ion-no-padding" [translucent]="true">
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <ion-img src="../../../assets/logo.png"></ion-img>
+    <ion-title>AstroWander</ion-title>
+    <ion-avatar>
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">home</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="header-class">
+    <ion-img src="../../../assets/logo.png"></ion-img>
+    <ion-title>
+      <span class="bold-heading">Astro</span>
+      <span class="normal-heading">Wander</span>
+    </ion-title>
+    <ion-avatar>
+      <img src="../../../assets/profile.svg" />
+    </ion-avatar>
+  </div>
+    <ion-searchbar class="search-class" placeholder="Search your destination">
+      <div class="searchbar-container">
+        <ion-img class="searchbar-img" src="../../../assets/instant_mix.svg"></ion-img>
+      </div>
+    </ion-searchbar>
+  <div class="content-header">
+    <span class="main-heading">Discover</span>
+    <span class="sub-heading">Similar trips you would love</span>
+  </div>
+  <div class="planets-container">
+    <div *ngFor="let planet of planets" class="card">
+      <ion-card class="card-1" [style.background-image]="'url(../../../assets/' + planet.backgroundImage + ')'">
+        <div class="card-content">
+          <span class="card-heading-1">{{ planet.heading1 }}</span>
+          <span class="card-heading-2">{{ planet.heading2 }}
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </span>
+        </div>
+      </ion-card>
+    </div>
+  </div>
+  <div class="button-container">
+    <ion-button>Explore Now</ion-button>
+  </div>
+  <div class="content-header">
+    <span class="main-heading">More Flights</span>
+    <span class="sub-heading">Similar trips you would love</span>
+  </div>
+  <div class="flights-container">
+    <div *ngFor="let flight of flights" class="flight-card">
+      <ion-card class="card-2" [style.background-image]="'url(../../../assets/' + flight.backgroundImage + ')'">
+        <ion-icon class="fav-icon" name="heart-outline"></ion-icon>
+      </ion-card>
+      <div class="flight-details">
+        <span class="card-heading-1">{{ flight.heading1 }}</span>
+        <div class="planet-detail">
+          <span class="about-flight">{{ flight.heading2 }}<ion-icon class="circle-icon" name="ellipse-outline"
+              name="radio-button-on"></ion-icon></span>
+          <span class="days">{{ flight.heading3 }}</span>
+        </div>
+        <div>
+          <span class="price">{{ flight.heading4 }}</span>
+          <span class="trip-way">{{ flight.heading5 }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>
