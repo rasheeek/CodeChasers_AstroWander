@@ -25,7 +25,12 @@ const routes: Routes = [
   {
     path: 'seat-booking',
     loadChildren: () => import('./pages/seat-booking/seat-booking.module').then( m => m.SeatBookingPageModule)
+  },
+  {
+    path: 'snack-list',
+    loadChildren: () => import('./pages/snack-list/snack-list.module').then( m => m.SnackListPageModule)
   }
+
 
 
 
