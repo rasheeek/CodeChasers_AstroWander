@@ -30,7 +30,7 @@
 
 .shape1 {
     width: 350px;
-    height: 272px;
+    height: 278px;
     flex-shrink: 0;
     border-radius: 25px;
     background: rgba(18, 23, 29, 0.55);
@@ -48,6 +48,7 @@
     line-height: normal;
     padding-top: 16px;
     padding-left: 21px;
+    margin-bottom: 0;
 }
 
 .des {
@@ -59,8 +60,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 17px;
-    margin-left: 22px;
+    display: inline;
+    margin-right: 60px;
 }
 .pay {
     color: #FFF;
@@ -71,13 +72,104 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
     display: inline;
+    margin-left: 60px;
+}
+
+.head1 {
+    margin-top: 17px;
+    text-align: center;
+}
+
+.head2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.ear {
+    color: #FFF;
+
+    /* Heading -4 */
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: inline;
+    margin-right: 25px;
+}
+
+.date {
+    color: #FFF;
+
+    /* Heading -4 */
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: inline;
+    margin-left: 25px;
+}
+
+.seats {
+    color: #FFF;
+    
+    /* caption */
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 21.5px;
+    margin-top: 17px;
+    margin-bottom: 0;
+}
+
+.prem {
+    color: #FFF;
+
+    /* Heading -4 */
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 21.5px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.order {
+    width: 170px;
+    height: 19px;
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.60);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Title 14 */
+    font-family: Be Vietnam;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    /* 128.571% */
+    margin: 22px auto auto auto;
+}
+
+.barcode {
+    width: 217px;
+    height: 40px;
+    flex-shrink: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
 }
 
 .shape2 {
     width: 350px;
-    height: 272px;
+    height: 278px;
     flex-shrink: 0;
     border-radius: 25px;
     background: rgba(18, 23, 29, 0.55);
