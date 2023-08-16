@@ -37,7 +37,12 @@ const routes: Routes = [
   {
     path: 'payfinger',
     loadChildren: () => import('./pages/payfinger/payfinger.module').then( m => m.PayfingerPageModule)
+  },
+  {
+    path: 'payment',
+    loadChildren: () => import('./pages/payment/payment.module').then( m => m.PaymentPageModule)
   }
+
 
 
 
