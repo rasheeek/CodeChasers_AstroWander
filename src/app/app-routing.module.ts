@@ -25,7 +25,12 @@ const routes: Routes = [
   {
     path: 'fingerprint',
     loadChildren: () => import('./pages/fingerprint/fingerprint.module').then( m => m.FingerprintPageModule)
+  },
+  {
+    path: 'mytrips',
+    loadChildren: () => import('./pages/mytrips/mytrips.module').then( m => m.MytripsPageModule)
   }
+
 
 
 

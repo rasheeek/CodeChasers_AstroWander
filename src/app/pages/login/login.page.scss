@@ -66,6 +66,28 @@
     line-height: normal;
 }
 
+.pass {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    padding: 10px 15px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.20);
+
+    margin: 40px auto auto auto;
+    color: rgba(229, 184, 244, 0.50);
+
+    /* Text input -1 */
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
 .radio {
     width: 240px;
     height: 240px;
