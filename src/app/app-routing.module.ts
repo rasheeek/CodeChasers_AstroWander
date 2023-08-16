@@ -29,7 +29,12 @@ const routes: Routes = [
   {
     path: 'mytrips',
     loadChildren: () => import('./pages/mytrips/mytrips.module').then( m => m.MytripsPageModule)
+  },
+  {
+    path: 'bookingsuccess',
+    loadChildren: () => import('./pages/bookingsuccess/bookingsuccess.module').then( m => m.BookingsuccessPageModule)
   }
+
 
 
 
