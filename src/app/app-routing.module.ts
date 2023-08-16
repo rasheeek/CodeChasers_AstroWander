@@ -33,7 +33,12 @@ const routes: Routes = [
   {
     path: 'bookingsuccess',
     loadChildren: () => import('./pages/bookingsuccess/bookingsuccess.module').then( m => m.BookingsuccessPageModule)
+  },
+  {
+    path: 'payfinger',
+    loadChildren: () => import('./pages/payfinger/payfinger.module').then( m => m.PayfingerPageModule)
   }
+
 
 
 

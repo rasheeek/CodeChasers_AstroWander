@@ -33,42 +33,13 @@
     margin-bottom: 0;
 }
 
-.detail {
-    color: #FFF;
-    
-    /* Heading -4 */
-    font-family: Poppins;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    margin-top: 10px;
-    margin-left: 24px;
-    width: 280px;
-    margin-bottom: 0;
-}
-
 .shape1 {
     width: 350px;
-    height: 278px;
+    height: 334px;
     flex-shrink: 0;
     border-radius: 25px;
     background: rgba(18, 23, 29, 0.55);
     margin: 20px auto auto auto;
-}
-
-.invo {
-    color: #FFF;
-
-    /* Heading -4 */
-    font-family: Poppins;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    padding-top: 16px;
-    padding-left: 23px;
-    margin-bottom: 0;
 }
 
 .des {
@@ -98,13 +69,70 @@
 }
 
 .head1 {
-    margin-top: 17px;
+    margin-top: 11px;
     text-align: center;
 }
 
 .head2 {
     margin-top: 0;
     text-align: center;
+}
+
+.head3 {
+    margin-top: 8px;
+    text-align: center;
+}
+
+.gender {
+    color: #FFF;
+
+    /* caption */
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: inline;
+    margin-right: 123px;
+}
+
+.no {
+    color: #FFF;
+
+    /* caption */
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: inline;
+    margin-left: 123px;
+}
+
+.gender1 {
+    color: #FFF;
+
+    /* caption */
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: inline;
+    margin-right: 115px;
+}
+
+.no1 {
+    color: #FFF;
+
+    /* caption */
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: inline;
+    margin-left: 115px;
 }
 
 .ear {
@@ -133,20 +161,6 @@
     margin-left: 25px;
 }
 
-.seats {
-    color: #FFF;
-
-    /* caption */
-    font-family: Poppins;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-left: 21.5px;
-    margin-top: 17px;
-    margin-bottom: 0;
-}
-
 .prem {
     color: #FFF;
 
@@ -156,41 +170,21 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    margin-left: 21.5px;
-    margin-top: 0;
+    margin-left: 22px;
+    padding-top: 64px;
     margin-bottom: 0;
 }
 
-.order {
-    width: 170px;
-    height: 19px;
-    flex-shrink: 0;
-    color: rgba(255, 255, 255, 0.60);
-    font-feature-settings: 'clig' off, 'liga' off;
-
-    /* Title 14 */
-    font-family: Be Vietnam;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-    /* 128.571% */
-    margin: 22px auto auto auto;
-}
-
-.barcode {
-    width: 217px;
-    height: 40px;
-    flex-shrink: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 8px;
+.line {
+    width: 313.006px;
+    height: 1px;
+    background: #9CABC2;
+    margin: 8px auto auto auto;
 }
 
 .mytrips {
     display: flex;
-    width: 250px;
+    width: 164px;
     height: 50px;
     padding: 10px;
     justify-content: center;
@@ -199,7 +193,7 @@
     flex-shrink: 0;
     border-radius: 10px;
     background: var(--primary-color-1, #E5B8F4);
-    margin: 177px auto auto auto;
+    margin: 18px auto auto 168px;
     color: var(--primary-color-4, #2D033B);
 
     /* Body text */
@@ -208,4 +202,15 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+
+.radio {
+    width: 134px;
+    height: 134px;
+    flex-shrink: 0;
+    margin-top: 75px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 }
