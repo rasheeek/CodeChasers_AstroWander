@@ -3,18 +3,21 @@ ion-content {
 
   .back-button {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    background-color: #E5B8F4;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
     margin-top: 24px;
     margin-left: 24px;
 
-    ion-icon {
-      font-size: 25px;
-      color: #1C1B1F;
+    ion-button {
+      width: 45px;
+      height: 45px;
+      background-color: #E5B8F4;
+      border-radius: 10px;
+
+      ion-icon {
+        font-size: 25px;
+        color: #1C1B1F;
+      }
     }
   }
 
@@ -106,16 +109,19 @@ ion-content {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #E5B8F4;
-        width: 50px;
-        height: auto;
-        border-radius: 10px;
-        padding: 5px;
 
-        ion-icon {
-          font-size: 18px;
-          color: #1C1B1F;
+        ion-button {
+          width: 55px;
+          background-color: #E5B8F4;
+          border-radius: 10px;
+
+          ion-icon {
+            font-size: 18px;
+            color: #1C1B1F;
+          }
         }
+
+
       }
     }
   }
@@ -143,17 +149,13 @@ ion-content {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #2D033B;
-      width: 60px;
-      height: auto;
-      border-radius: 10px;
-      padding: 5px;
 
-      .scan-button-text {
+      ion-button {
+        width: 55px;
+        background-color: #2D033B;
+        border-radius: 10px;
         color: #E5B8F4;
-        --ion-font-family: "poppins";
         font-size: 12px;
-        font-weight: 400;
       }
     }
   }
@@ -170,23 +172,19 @@ ion-content {
     }
   }
 
-  .confirm-button {
+  .confirm-submit {
     display: flex;
-    width: 250px;
-    height: 50px;
-    padding: 10px;
     justify-content: center;
     align-items: center;
-    background: #2D033B;
-    border-radius: 10px;
-    margin: auto;
-    margin-top: 115px;
+    flex-direction: column;
 
-    .confirm-button-text {
-      color: #ECF0F3;
-      --font-family: "Poppins";
-      font-size: 16px;
-      font-weight: 500;
+    ion-button {
+      margin-top: 115px;
+      width: 70%;
+      background-color: #1C1B1F;
+      border-radius: 10px;
+      color: #FFF;
+      font-size: 14px;
     }
   }
 

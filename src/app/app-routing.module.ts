@@ -17,7 +17,17 @@ const routes: Routes = [
   {
     path: 'add-passengers',
     loadChildren: () => import('./pages/add-passengers/add-passengers.module').then( m => m.AddPassengersPageModule)
+  },
+  {
+    path: 'scan-medical',
+    loadChildren: () => import('./pages/scan-medical/scan-medical.module').then( m => m.ScanMedicalPageModule)
+  },
+  {
+    path: 'seat-booking',
+    loadChildren: () => import('./pages/seat-booking/seat-booking.module').then( m => m.SeatBookingPageModule)
   }
+
+
 
 ];
 @NgModule({
