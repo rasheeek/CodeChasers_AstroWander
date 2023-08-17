@@ -16,7 +16,7 @@ ion-img {
 
 .bold-heading {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -25,7 +25,7 @@ ion-img {
 
 .normal-heading {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 24px;
     font-style: normal;
     font-weight: 300;
@@ -48,7 +48,7 @@ ion-avatar {
     flex-shrink: 0;
     --border-radius: 20px;
     color: rgba(45, 3, 59, 0.40);
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -78,7 +78,7 @@ ion-avatar {
 
 .main-heading {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -86,7 +86,7 @@ ion-avatar {
 
 .sub-heading {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
@@ -120,7 +120,7 @@ ion-avatar {
 
 .card-heading-1 {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -129,7 +129,7 @@ ion-avatar {
 
 .card-heading-2 {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
@@ -152,10 +152,9 @@ ion-icon {
 }
 
 ion-button {
-    --background: #2D033B;
     text-transform: capitalize;
     color: var(--primary-color-1, #E5B8F4);
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -191,7 +190,7 @@ ion-button {
 
     .about-flight {
         color: #FFF;
-        font-family: Poppins;
+        --font-family: "Poppins";
         font-size: 10px;
         font-style: normal;
         font-weight: 400;
@@ -207,7 +206,7 @@ ion-button {
 
     .days {
         color: #FFF;
-        font-family: Poppins;
+        --font-family: "Poppins";
         font-size: 10px;
         font-style: normal;
         font-weight: 400;
@@ -217,7 +216,7 @@ ion-button {
 
 .price {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 10px;
     font-style: normal;
     font-weight: 500;
@@ -226,7 +225,7 @@ ion-button {
 
 .trip-way {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 8px;
     font-style: normal;
     font-weight: 300;

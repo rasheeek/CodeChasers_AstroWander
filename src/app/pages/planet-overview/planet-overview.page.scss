@@ -35,7 +35,7 @@ ion-content {
 
 h1 {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -50,7 +50,7 @@ h1 {
 
 .about-flight {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -66,7 +66,7 @@ h1 {
 
 .days {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -85,7 +85,7 @@ ion-img {
 
 .rate-class1 {
     color: var(--rated-color-circle, #FFD84D);
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 10px;
     font-style: normal;
     font-weight: 700;
@@ -96,7 +96,7 @@ ion-img {
 
 .rate-class2 {
     color: var(--rated-color-circle, #FFD84D);
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 8px;
     font-style: normal;
     font-weight: 400;
@@ -119,10 +119,9 @@ ion-button {
     height: 40px;
     justify-content: center;
     align-items: center;
-    --background: #2D033B;
     text-transform: capitalize;
     color: var(--primary-color-1, #E5B8F4);
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 10px;
     font-style: normal;
     font-weight: 700;
@@ -137,7 +136,7 @@ ion-button {
 
 .about-heading {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -147,7 +146,7 @@ ion-button {
 
 .about-content {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -167,7 +166,7 @@ ion-button {
     --background: #2D033B;
     text-transform: capitalize;
     color: var(--primary-color-1, #E5B8F4);
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -232,7 +231,7 @@ ion-button {
 
 .item-heading1 {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -242,7 +241,7 @@ ion-button {
 
 .item-heading2 {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
@@ -264,7 +263,7 @@ ion-button {
 
 .rating-heading {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -273,7 +272,7 @@ ion-button {
 
 .review-class {
     color: var(--rated-color-circle, #FFD84D);
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -291,7 +290,7 @@ ion-button {
 
 .name-class {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -313,7 +312,7 @@ ion-button {
 
 .review-date {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
@@ -323,7 +322,7 @@ ion-button {
 
 .rating-content {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -370,7 +369,7 @@ ion-button {
 
 .card-heading-1 {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -379,7 +378,7 @@ ion-button {
 
 .card-heading-2 {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
@@ -394,7 +393,7 @@ ion-button {
 
 .about-flights {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -403,7 +402,7 @@ ion-button {
 
 .about-tips {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
@@ -437,7 +436,7 @@ ion-button {
 
     .about-flight2 {
         color: #FFF;
-        font-family: Poppins;
+        --font-family: "Poppins";
         font-size: 10px;
         font-style: normal;
         font-weight: 400;
@@ -454,7 +453,7 @@ ion-button {
 
     .days2 {
         color: #FFF;
-        font-family: Poppins;
+        --font-family: "Poppins";
         font-size: 10px;
         font-style: normal;
         font-weight: 400;
@@ -464,7 +463,7 @@ ion-button {
 
 .price {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 10px;
     font-style: normal;
     font-weight: 500;
@@ -473,7 +472,7 @@ ion-button {
 
 .trip-way {
     color: #FFF;
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 8px;
     font-style: normal;
     font-weight: 300;
@@ -502,7 +501,7 @@ ion-button {
     --background: var(--primary-color-1, #E5B8F4);
     text-transform: capitalize;
     color: var(--primary-color-4, #2D033B);
-    font-family: Poppins;
+    --font-family: "Poppins";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
