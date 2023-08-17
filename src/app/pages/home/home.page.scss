@@ -1,0 +1,244 @@
+ion-content {
+    --background: linear-gradient(#2B1B59, #73298C);
+}
+
+ion-img {
+    width: 48px;
+    height: 32px;
+}
+
+.header-class {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.bold-heading {
+    color: #FFF;
+    --font-family: "Poppins";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+}
+
+.normal-heading {
+    color: #FFF;
+    --font-family: "Poppins";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 125%;
+}
+
+ion-avatar {
+    width: 60px;
+    height: 60px;
+}
+
+.search-class {
+    display: flex;
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    --border-radius: 20px;
+    color: rgba(45, 3, 59, 0.40);
+    --font-family: "Poppins";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.24px;
+    text-align: left;
+}
+
+.searchbar-container {
+    position: absolute;
+    right: 20px;
+    z-index: 1;
+}
+
+.searchbar-img {
+    width: 24px;
+    height: 24px;
+    z-index: 2;
+}
+
+.content-header {
+    margin-top: 10px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-heading {
+    color: #FFF;
+    --font-family: "Poppins";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.sub-heading {
+    color: #FFF;
+    --font-family: "Poppins";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.planets-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.card {
+    display: flex;
+
+    .card-1 {
+        width: 165px;
+        height: 165px;
+        border-radius: 20px;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.card-content {
+    margin-top: 115px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-heading-1 {
+    color: #FFF;
+    --font-family: "Poppins";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.card-heading-2 {
+    color: #FFF;
+    --font-family: "Poppins";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 114%;
+}
+
+ion-icon {
+    width: 15px;
+    height: 15px;
+    margin-left: 70px;
+}
+
+.button-container {
+    width: 320px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: #FFF;
+    background: url("../../../assets/background\ img.png");
+    margin: 20px;
+}
+
+ion-button {
+    text-transform: capitalize;
+    color: var(--primary-color-1, #E5B8F4);
+    --font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 15px;
+    margin-top: 150px;
+}
+
+.flights-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.flight-card {
+
+    .card-2 {
+        width: 160px;
+        height: 160px;
+        border-radius: 20px;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.flight-details {
+    margin-left: 15px;
+    margin-bottom: 35px;
+}
+
+.planet-detail {
+
+    .about-flight {
+        color: #FFF;
+        --font-family: "Poppins";
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 114%;
+    }
+
+    .circle-icon {
+        width: 5px;
+        height: 5px;
+        color: #FFF;
+        margin: 0 5px;
+    }
+
+    .days {
+        color: #FFF;
+        --font-family: "Poppins";
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 114%;
+    }
+}
+
+.price {
+    color: #FFF;
+    --font-family: "Poppins";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 114%;
+}
+
+.trip-way {
+    color: #FFF;
+    --font-family: "Poppins";
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 114%;
+    margin-left: 10px;
+}
+
+.fav-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.20);
+    background: #FFF;
+    margin-left: 115px;
+    margin-top: 117px;
+}

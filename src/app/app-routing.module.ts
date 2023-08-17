@@ -13,7 +13,19 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+  },  {
+    path: 'planet-overview',
+    loadChildren: () => import('./pages/planet-overview/planet-overview.module').then( m => m.PlanetOverviewPageModule)
+  },
+  {
+    path: 'search-crafts',
+    loadChildren: () => import('./pages/search-crafts/search-crafts.module').then( m => m.SearchCraftsPageModule)
+  },
+  {
+    path: 'selected-flight',
+    loadChildren: () => import('./pages/selected-flight/selected-flight.module').then( m => m.SelectedFlightPageModule)
   }
+
 ];
 @NgModule({
   imports: [
