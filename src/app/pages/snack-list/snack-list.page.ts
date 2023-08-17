@@ -21,7 +21,7 @@ export class SnackListPage implements OnInit {
   ]
 
   categories = ['snacks', 'meals', 'pluto-specials'];
-  selectedCategory = 'snacks';
+  selectedCategory = '';
 
 
   constructor(

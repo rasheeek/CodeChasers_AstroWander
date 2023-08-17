@@ -9,15 +9,8 @@
 
   <div class="slide-button">
     <ion-button *ngFor="let category of categories" (click)="selectButton(category)"
-      [color]="selectedCategory === category ? 'secondary' : ''" fill="outline">{{ category }}</ion-button>
+      [color]="selectedCategory === category ? 'secondary' : ''" [fill]="selectedCategory === category ? 'solid' : 'outline'">{{ category }}</ion-button>
   </div>
-
-  <!-- <div class="slide-button">
-    <ion-button color="secondary">Snacks</ion-button>
-    <ion-button fill="outline" color="secondary">Meals</ion-button>
-    <ion-button fill="outline" color="secondary">Pluto Specials</ion-button>
-    <ion-button fill="outline" color="secondary">other</ion-button>
-  </div> -->
 
   <div class="first-div">
     <ion-item lines="none">
