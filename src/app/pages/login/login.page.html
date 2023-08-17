@@ -1,23 +1,21 @@
-<!-- <ion-header [translucent]="true" class="body">
-  <ion-toolbar>
-
-  </ion-toolbar>
-</ion-header> -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-
-<ion-content [fullscreen]="true" class="body">
-  <div class="arrow_back">
-    <img src="../../../assets/icon/arrow_back_ios_new.svg">
+<ion-content>
+  <div class="image-div">
+    <img src="../../../assets/icon/Ellipse 9.svg" />
   </div>
-  <img src="../../../assets/icon/Ellipse 9.svg" class="profile">
-  <h1 class="header">Welcome Back!</h1>
-  <form>
-    <div class="id">
-      <ion-input placeholder="Neural-ID"></ion-input>
+
+  <h1>Welcome Back!</h1>
+  <form [formGroup]="logInForm">
+
+    <div class="input">
+      <ion-input placeholder="Email" type="email" formControlName="email"></ion-input>
     </div>
-      <div class="pass">
-        <ion-input placeholder="Password"></ion-input>
-      </div>
+    <div class="input">
+      <ion-input placeholder="Password" type="password" formControlName="password"></ion-input>
+    </div>
+
+    <div class="button">
+      <ion-button (click)="login()">Login</ion-button>
+      <span class="register" (click)="register()">Don't have an account?</span>
+    </div>
   </form>
-  <img src="../../../assets/icon/Group 2912.svg" class="radio" (click)="login()">
 </ion-content>

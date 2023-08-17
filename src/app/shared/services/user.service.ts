@@ -85,7 +85,7 @@ export class UserService {
         })
       );
   }
-  
+
   public listenToCustomer(email : string) {
     return this.afs
       .doc(`stripe_customers/${email}`)

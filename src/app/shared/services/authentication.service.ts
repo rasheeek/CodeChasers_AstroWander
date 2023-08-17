@@ -7,7 +7,7 @@ import { Router } from "@angular/router";
 
 import { NavController } from "@ionic/angular";
 import { BehaviorSubject, from, Subscription } from "rxjs";
-import { UserService } from "./user.service";
+// import { UserService } from "./user.service";
 
 @Injectable({
   providedIn: "root",
@@ -15,50 +15,50 @@ import { UserService } from "./user.service";
 export class AuthenticationService {
   userSubscription: any = new Subscription();
   fisrtTime: boolean = true;
-  
+
   userDetails : BehaviorSubject<any> = new BehaviorSubject<any>(null);
 
   constructor(
     private afAuth: AngularFireAuth,
     private ngZone: NgZone,
     private navCtrl: NavController,
-    private userService: UserService,
+    // private userService: UserService,
   ) {}
 
-  public checkAuthState() {
-    var that = this;
-    this.fisrtTime = true;
-    this.afAuth.onAuthStateChanged(async function (user) {
-      if (user) {
-        console.log("logged in", user);
-        that.listenToUser(user.uid, user.email? user.email : '');
-       
-      } else {
-        that.ngZone.run(() => {
-          if (!that.fisrtTime) {
-            that.signOut();
-          }
-        });
-      }
-      that.fisrtTime = false;
-    });
-  }
+  // public checkAuthState() {
+  //   var that = this;
+  //   this.fisrtTime = true;
+  //   this.afAuth.onAuthStateChanged(async function (user) {
+  //     if (user) {
+  //       console.log("logged in", user);
+  //       that.listenToUser(user.uid, user.email? user.email : '');
+
+  //     } else {
+  //       that.ngZone.run(() => {
+  //         if (!that.fisrtTime) {
+  //           that.signOut();
+  //         }
+  //       });
+  //     }
+  //     that.fisrtTime = false;
+  //   });
+  // }
 
 
-  listenToUser(id : string, email : string) {
-    this.userSubscription = this.userService
-      .listenToCurrentUser(id)
-      .subscribe((res: any) => {
-        console.log("User data updating", res);
-        if (res) {
-          res.email = email;
-          res.uid = id;
-          this.userDetails.next(res);
-        } else {
-          this.userDetails.next({ email: email, id: id })
-        }
-      });
-  }
+  // listenToUser(id : string, email : string) {
+  //   this.userSubscription = this.userService
+  //     .listenToCurrentUser(id)
+  //     .subscribe((res: any) => {
+  //       console.log("User data updating", res);
+  //       if (res) {
+  //         res.email = email;
+  //         res.uid = id;
+  //         this.userDetails.next(res);
+  //       } else {
+  //         this.userDetails.next({ email: email, id: id })
+  //       }
+  //     });
+  // }
 
 
   loginUser(email : string, password : string) {
