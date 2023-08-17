@@ -20,6 +20,10 @@ const routes: Routes = [
   {
     path: 'search-crafts',
     loadChildren: () => import('./pages/search-crafts/search-crafts.module').then( m => m.SearchCraftsPageModule)
+  },
+  {
+    path: 'selected-flight',
+    loadChildren: () => import('./pages/selected-flight/selected-flight.module').then( m => m.SelectedFlightPageModule)
   }
 
 ];

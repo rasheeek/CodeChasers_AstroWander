@@ -2,15 +2,24 @@ ion-content {
     --background: linear-gradient(#2B1B59, #73298C);
 }
 
-.arrow-back {
+.back-button {
+    display: flex;
+    justify-content: flex-start;
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    background: var(--primary-color-1, #E5B8F4);
-}
+    left: 15px;
+    top: 15px;
+
+    ion-button {
+      width: 40px;
+      height: 40px;
+      --border-radius: 12px;
+
+      ion-icon {
+        font-size: 35px;
+        color: #1C1B1F;
+      }
+    }
+  }
 
 .planet-overview {
     width: auto;
