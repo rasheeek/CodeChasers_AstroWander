@@ -15,6 +15,35 @@ const routes: Routes = [
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
   },
   {
+
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'fingerprint',
+    loadChildren: () => import('./pages/fingerprint/fingerprint.module').then( m => m.FingerprintPageModule)
+  },
+  {
+    path: 'mytrips',
+    loadChildren: () => import('./pages/mytrips/mytrips.module').then( m => m.MytripsPageModule)
+  },
+  {
+    path: 'bookingsuccess',
+    loadChildren: () => import('./pages/bookingsuccess/bookingsuccess.module').then( m => m.BookingsuccessPageModule)
+  },
+  {
+    path: 'payfinger',
+    loadChildren: () => import('./pages/payfinger/payfinger.module').then( m => m.PayfingerPageModule)
+  },
+  {
+    path: 'payment',
+    loadChildren: () => import('./pages/payment/payment.module').then( m => m.PaymentPageModule)
+  },
+  {
     path: 'planet-overview',
     loadChildren: () => import('./pages/planet-overview/planet-overview.module').then( m => m.PlanetOverviewPageModule)
   },
@@ -45,7 +74,16 @@ const routes: Routes = [
   {
      path: 'selected-flight',
     loadChildren: () => import('./pages/selected-flight/selected-flight.module').then( m => m.SelectedFlightPageModule)
+
   }
+
+
+
+
+
+
+
+
 ];
 
  @NgModule({
