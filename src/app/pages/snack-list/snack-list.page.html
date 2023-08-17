@@ -8,11 +8,16 @@
   <h1>Grab your snacks!</h1>
 
   <div class="slide-button">
+    <ion-button *ngFor="let category of categories" (click)="selectButton(category)"
+      [color]="selectedCategory === category ? 'secondary' : ''" fill="outline">{{ category }}</ion-button>
+  </div>
+
+  <!-- <div class="slide-button">
     <ion-button color="secondary">Snacks</ion-button>
     <ion-button fill="outline" color="secondary">Meals</ion-button>
     <ion-button fill="outline" color="secondary">Pluto Specials</ion-button>
     <ion-button fill="outline" color="secondary">other</ion-button>
-  </div>
+  </div> -->
 
   <div class="first-div">
     <ion-item lines="none">
@@ -22,31 +27,13 @@
       </ion-label>
     </ion-item>
     <ion-row>
-      <ion-col>
+      <ion-col *ngFor="let item of snacks">
         <ion-card>
           <div class="image-div">
             <!-- <img src="" /> -->
           </div>
-          <span class="product-name">Stellar Cheddar Crisps</span>
-          <span class="product-price">50</span>
-        </ion-card>
-      </ion-col>
-      <ion-col>
-        <ion-card>
-          <div class="image-div">
-            <!-- <img src="" /> -->
-          </div>
-          <span class="product-name">Stellar Cheddar Crisps</span>
-          <span class="product-price">50</span>
-        </ion-card>
-      </ion-col>
-      <ion-col>
-        <ion-card>
-          <div class="image-div">
-            <!-- <img src="" /> -->
-          </div>
-          <span class="product-name">Stellar Cheddar Crisps</span>
-          <span class="product-price">50</span>
+          <span class="product-name">{{item.name}}</span>
+          <span class="product-price">{{item.price}}</span>
         </ion-card>
       </ion-col>
     </ion-row>
@@ -60,31 +47,13 @@
       </ion-label>
     </ion-item>
     <ion-row>
-      <ion-col>
+      <ion-col *ngFor="let item of snacks">
         <ion-card>
           <div class="image-div">
             <!-- <img src="" /> -->
           </div>
-          <span class="product-name">Asteroid Cheese</span>
-          <span class="product-price">250</span>
-        </ion-card>
-      </ion-col>
-      <ion-col>
-        <ion-card>
-          <div class="image-div">
-            <!-- <img src="" /> -->
-          </div>
-          <span class="product-name">Asteroid Cheese</span>
-          <span class="product-price">250</span>
-        </ion-card>
-      </ion-col>
-      <ion-col>
-        <ion-card>
-          <div class="image-div">
-            <!-- <img src="" /> -->
-          </div>
-          <span class="product-name">Asteroid Cheese</span>
-          <span class="product-price">250</span>
+          <span class="product-name">{{item.name}}</span>
+          <span class="product-price">{{item.price}}</span>
         </ion-card>
       </ion-col>
     </ion-row>

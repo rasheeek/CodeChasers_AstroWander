@@ -29,7 +29,12 @@ const routes: Routes = [
   {
     path: 'snack-list',
     loadChildren: () => import('./pages/snack-list/snack-list.module').then( m => m.SnackListPageModule)
+  },
+  {
+    path: 'checkout',
+    loadChildren: () => import('./pages/checkout/checkout.module').then( m => m.CheckoutPageModule)
   }
+
 
 
 
