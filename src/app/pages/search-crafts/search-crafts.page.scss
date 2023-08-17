@@ -121,6 +121,7 @@ ion-avatar {
         width: 100%;
         border-radius: 10px;
         padding: 5px;
+        position: relative;
 
         p {
             color: #FFF;
@@ -136,6 +137,12 @@ ion-avatar {
             font-size: 10px;
             font-weight: 400;
             margin: 15px 0px 0px 15px;
+        }
+
+        .save-img {
+            position: absolute;
+            right: 40px;
+            top: 0;
         }
 
         ion-row {
