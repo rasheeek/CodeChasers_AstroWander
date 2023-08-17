@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
 <ion-content [fullscreen]="true" class="body">
-  <div class="arrow_back">
+  <div class="arrow_back" (click)="back()">
     <img src="../../../assets/icon/arrow_back_ios_new.svg">
   </div>
   <p class="header">Astro Settle</p>
@@ -55,6 +55,6 @@
       <p class="no4">190,000</p>
     </div>
   </div>
-  <ion-button>My Trips</ion-button>
+  <ion-button (click)="next()">Next</ion-button>
 
 

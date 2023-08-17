@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-passengers',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPassengersPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit() {
+  }
+
+  back(){
+    this.router.navigate(['/selected-flight']);
+  }
+
+  scan(){
+    this.router.navigate(['/scan-medical']);
+  }
+
+  confirmDetails(){
+    this.router.navigate(['/seat-booking']);
   }
 
 }

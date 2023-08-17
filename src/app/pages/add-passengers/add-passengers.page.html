@@ -1,5 +1,5 @@
 <ion-content>
-  <div class="back-button">
+  <div class="back-button" (click)="back()">
     <ion-button size="small" color="secondary">
       <ion-icon name="chevron-back-outline"></ion-icon>
     </ion-button>
@@ -31,7 +31,7 @@
 
   <div class="scan-detail">
     <span class="adult-scan-details">Adult 1/3</span>
-    <div class="scan-button">
+    <div class="scan-button" (click)="scan()">
       <ion-button size="small">
         Scan
       </ion-button>
@@ -59,7 +59,7 @@
     </div>
   </div>
 
-  <div class="confirm-submit">
+  <div class="confirm-submit" (click)="confirmDetails()">
     <ion-button>
       Confirm
     </ion-button>

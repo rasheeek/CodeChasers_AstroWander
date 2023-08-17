@@ -18,7 +18,7 @@
     <span class="main-heading">Discover</span>
     <span class="sub-heading">Similar trips you would love</span>
   </div>
-  <div class="planets-container">
+  <div class="planets-container" (click)="overview()">
     <div *ngFor="let planet of planets" class="card">
       <ion-card class="card-1" [style.background-image]="'url(../../../assets/' + planet.backgroundImage + ')'">
         <div class="card-content">

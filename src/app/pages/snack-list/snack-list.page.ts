@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-snack-list',
@@ -23,13 +24,27 @@ export class SnackListPage implements OnInit {
   selectedCategory = 'snacks';
 
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit() {
   }
 
   selectButton(category: string) {
     this.selectedCategory = category;
+  }
+
+  back(){
+    this.router.navigate(['/seat-booking']);
+  }
+
+  skip(){
+    this.router.navigate(['/checkout']);
+  }
+
+  continue(){
+    this.router.navigate(['/checkout']);
   }
 
 }

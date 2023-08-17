@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
 <ion-content [fullscreen]="true" class="body">
-  <div class="arrow_back">
+  <div class="arrow_back" (click)="back()">
     <img src="../../../assets/icon/arrow_back_ios_new.svg">
   </div>
   <p class="header">Place your Finger</p>
@@ -35,6 +35,6 @@
     <div class="line"></div>
     <button class="mytrips">My Trips</button>
   </div>
-  <img src="../../../assets/icon/Group 2912.svg" class="radio">
+  <img (click)="confirm()" src="../../../assets/icon/Group 2912.svg" class="radio">
 
 </ion-content>

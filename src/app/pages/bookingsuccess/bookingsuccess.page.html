@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
 <ion-content [fullscreen]="true" class="body">
-  <div class="arrow_back">
+  <div class="arrow_back" (click)="back()">
     <img src="../../../assets/icon/arrow_back_ios_new.svg">
   </div>
   <p class="header">Booking Success</p>
@@ -28,6 +28,6 @@
     <img src="../../../assets/icon/Barcode.svg" class="barcode">
   </div>
 
-  <button class="mytrips">My Trips</button>
+  <button class="mytrips" (click)="myTrips()">My Trips</button>
 
 </ion-content>

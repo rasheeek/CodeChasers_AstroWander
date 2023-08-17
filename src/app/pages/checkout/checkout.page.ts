@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -13,9 +14,19 @@ export class CheckoutPage implements OnInit {
     { name: "CosmicJet Airlines", price: "350k", quantity: "03" }
   ]
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit() {
+  }
+
+  back(){
+    this.router.navigate(['/snack-list']);
+  }
+
+  pay(){
+    this.router.navigate(['/payment']);
   }
 
 }

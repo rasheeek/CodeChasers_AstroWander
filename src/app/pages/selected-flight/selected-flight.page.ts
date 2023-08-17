@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-selected-flight',
@@ -13,9 +14,19 @@ export class SelectedFlightPage implements OnInit {
     { category: "Infant", detail: "Below 2 years", quantity: "02" }
   ]
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit() {
+  }
+
+  back(){
+    this.router.navigate(['/tabs/search-crafts']);
+  }
+
+  addPassengers(){
+    this.router.navigate(['/add-passengers']);
   }
 
 }

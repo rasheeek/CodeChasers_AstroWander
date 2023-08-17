@@ -1,5 +1,5 @@
 <ion-content [fullscreen]="true">
-  <div class="back-button">
+  <div class="back-button" (click)="back()">
     <ion-button size="small" color="secondary">
       <ion-icon name="chevron-back-outline"></ion-icon>
     </ion-button>
@@ -63,7 +63,7 @@
         <div class="add-remove-btn">+</div>
       </div>
   </div>
-  <div class="button-container">
+  <div class="button-container" (click)="addPassengers()">
     <ion-button>Continue</ion-button>
   </div>
 </ion-content>

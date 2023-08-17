@@ -4,12 +4,20 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: '',
     component: TabsPage,
     children: [
       {
         path: 'home',
         loadChildren: () => import('../pages/home/home.module').then(m => m.HomePageModule)
+      },
+      {
+        path: 'mytrips',
+        loadChildren: () => import('../pages/mytrips/mytrips.module').then( m => m.MytripsPageModule)
+      },
+      {
+        path: 'search-crafts',
+        loadChildren: () => import('../pages/search-crafts/search-crafts.module').then( m => m.SearchCraftsPageModule)
       },
       {
         path: 'profile',
