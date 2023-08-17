@@ -27,7 +27,10 @@ export class LoginPage implements OnInit {
 
   login() {
     this.authService.loginUser(this.logInForm.value.email, this.logInForm.value.password)
-      .then(() => {
+      .then((res) => {
+        console.log(res);
+        
+        localStorage.setItem('id', res.user.uid);
         this.router.navigate(['/tabs/home']);
       })
       .catch(error => {
