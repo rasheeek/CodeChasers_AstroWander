@@ -63,7 +63,11 @@ const routes: Routes = [
      path: 'selected-flight',
     loadChildren: () => import('./pages/selected-flight/selected-flight.module').then( m => m.SelectedFlightPageModule)
 
+  },  {
+    path: 'selected-snack',
+    loadChildren: () => import('./pages/selected-snack/selected-snack.module').then( m => m.SelectedSnackPageModule)
   }
+
 ];
 
  @NgModule({

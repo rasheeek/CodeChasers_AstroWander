@@ -47,4 +47,8 @@ export class SnackListPage implements OnInit {
     this.router.navigate(['/checkout']);
   }
 
+  viewSnack(){
+    this.router.navigate(['/selected-snack']);
+  }
+
 }
