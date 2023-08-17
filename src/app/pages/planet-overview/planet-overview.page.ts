@@ -1,22 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  selector: 'app-planet-overview',
+  templateUrl: './planet-overview.page.html',
+  styleUrls: ['./planet-overview.page.scss'],
 })
-export class HomePage implements OnInit {
+export class PlanetOverviewPage implements OnInit {
 
-  planets = [
-    { backgroundImage: 'mars.png', heading1: 'Mars', heading2: '1 Day travel' },
-    { backgroundImage: 'pluto.png', heading1: 'Pluto', heading2: '1 Day travel' },
-    { backgroundImage: 'jupiter.jpeg', heading1: 'Jupiter', heading2: '1 Day travel' },
-    { backgroundImage: 'saturn.jpeg', heading1: 'Saturn', heading2: '1 Day travel' },
-    { backgroundImage: 'venus.jpeg', heading1: 'Venus', heading2: '1 Day travel' },
-    { backgroundImage: 'uranus.jpg', heading1: 'Uranus', heading2: '1 Day travel' },
-    { backgroundImage: 'neptune.jpeg', heading1: 'Neptune', heading2: '1 Day travel' },
-    { backgroundImage: 'mercury.jpeg', heading1: 'Mercury', heading2: '1 Day travel' },
-    { backgroundImage: 'earth.jpg', heading1: 'Earth', heading2: '1 Day travel' },
+  selectedButtonIndex = 0;
+  images = [
+    { backgroundImage: 'jupiter1.jpeg'},
+    { backgroundImage: 'jupiter2.jpeg'},
+    { backgroundImage: 'jupiter3.jpg'},
+  ];
+
+  items = [
+    { img: 'directions_walk.png', heading1: 'Floating Skywalks', heading2: "Elevated paths offer panoramic views of jupiter's swirling cloudscape."},
+    { img: 'cyclone.png', heading1: 'Storm Safaris', heading2: 'uided tours to witness colossal storms and turbulent atmospheric phenomena.'},
+    { img: 'theaters.png', heading1: 'Holographic Celestial Shows', heading2: ' Immersive displays projecting captivating cosmic events.'},
+    { img: 'hot_tub.png', heading1: 'Atmospheric Spa Retreats', heading2: 'Luxurious relaxation within floating resorts amidst vibrant atmospheric colors.'},
+  ];
+
+  details = [
+    { backgroundImage: 'details1.png', heading1: 'Red Spot Balloon Tours', heading2: "150km from Galactiport City"},
+    { backgroundImage: 'details2.png', heading1: 'Celestial Scuba Diving', heading2: '10km from Novastrata City'},
   ];
 
   flights = [

@@ -1,0 +1,137 @@
+<ion-content [fullscreen]="true">
+  <div class="planet-overview">
+    <div class="back-button">
+      <ion-button size="small" color="secondary">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </div>
+    <ion-img src="../../../assets/planet-overview.png"></ion-img>
+    <div class="eclips-div">
+      <ion-img src="../../../assets/lightEllipse.png"></ion-img>
+      <ion-img src="../../../assets/darkEllipse.png"></ion-img>
+      <ion-img src="../../../assets/darkEllipse.png"></ion-img>
+      <ion-img src="../../../assets/darkEllipse.png"></ion-img>
+      <ion-img src="../../../assets/darkEllipse.png"></ion-img>
+    </div>
+  </div>
+  <h1>Jupiter</h1>
+  <div class="planet-detail">
+    <span class="about-flight">Air Shuttle 50</span>
+    <span class="days"><ion-icon class="circle-icon" name="radio-button-on"></ion-icon>1 day travel</span>
+  </div>
+  <div class="eclips-class">
+    <ion-img src="../../../assets/yellow-eclips.svg"></ion-img>
+    <ion-img src="../../../assets/yellow-eclips.svg"></ion-img>
+    <ion-img src="../../../assets/yellow-eclips.svg"></ion-img>
+    <ion-img src="../../../assets/yellow-eclips.svg"></ion-img>
+    <ion-img src="../../../assets/white-eclips.svg"></ion-img>
+    <span class="rate-class1">4.0</span>
+    <span class="rate-class2">(124)</span>
+  </div>
+  <div class="btn-class">
+    <ion-button [ngClass]="{'selected-button': selectedButtonIndex === 0}"
+      (click)="selectedButtonIndex = 0">Overview</ion-button>
+    <ion-button [ngClass]="{'selected-button': selectedButtonIndex === 1}"
+      (click)="selectedButtonIndex = 1">Tickets</ion-button>
+    <ion-button [ngClass]="{'selected-button': selectedButtonIndex === 2}"
+      (click)="selectedButtonIndex = 2">Safety</ion-button>
+  </div>
+  <div class="about-heading">About this planet</div>
+  <div class="about-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+    tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
+  <div class="btn-div">
+    <ion-button class="continue-btn">Continue Reading</ion-button>
+  </div>
+  <hr style="height:1px; border-width:0; background-color:#E5B8F4; margin:0px 20px 10px 20px;">
+  <div class="more-photos">
+    <div class="about-heading">Photos</div>
+    <ion-icon class="chevron-forward" name="chevron-forward-outline"></ion-icon>
+  </div>
+  <div class="planets-container">
+    <div *ngFor="let img of images" class="card">
+      <ion-card class="card-1" [style.background-image]="'url(../../../assets/' + img.backgroundImage + ')'">
+      </ion-card>
+    </div>
+  </div>
+  <hr style="height:1px; border-width:0; background-color:#E5B8F4; margin:10px 20px 10px 20px;">
+  <div class="about-heading">About this planet</div>
+  <div *ngFor="let item of items" class="about-type">
+    <ion-img class="item-img" [style.background-image]="'url(../../../assets/' + item.img + ')'"></ion-img>
+    <div class="item-heading">
+      <span class="item-heading1">{{item.heading1}}</span>
+      <span class="item-heading2">{{item.heading2}}</span>
+    </div>
+  </div>
+  <hr style="height:1px; border-width:0; background-color:#E5B8F4; margin:10px 20px 10px 20px;">
+  <div class="about-heading">360 AR Tour</div>
+  <div class="single-img"></div>
+  <hr style="height:1px; border-width:0; background-color:#E5B8F4; margin:10px 20px 10px 20px;">
+  <div class="rating">
+    <span class="rating-heading">Ratings</span>
+    <span class="review-class"><ion-icon class="yellow-circle" name="radio-button-on"></ion-icon>4.0</span>
+    <span class="review-class">(124 Reviews)</span>
+  </div>
+  <div class="eclips-class2">
+    <span class="name-class">Elon Musk</span>
+    <ion-img class="eclips" src="../../../assets/yellow-eclips.svg"></ion-img>
+    <ion-img class="eclips" src="../../../assets/yellow-eclips.svg"></ion-img>
+    <ion-img class="eclips" src="../../../assets/yellow-eclips.svg"></ion-img>
+    <ion-img class="eclips" src="../../../assets/white-eclips.svg"></ion-img>
+    <ion-img class="eclips" src="../../../assets/white-eclips.svg"></ion-img>
+  </div>
+  <div class="review-date">Review on November 2149</div>
+  <div class="rating-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+    tincidunt ut laoreet.</div>
+  <div class="img-div">
+    <ion-img src="../../../assets/Rectangle 873.png"></ion-img>
+    <ion-img src="../../../assets/Rectangle 874.png"></ion-img>
+    <ion-img src="../../../assets/Rectangle 875.png"></ion-img>
+    <ion-img src="../../../assets/Rectangle 875 (1).png"></ion-img>
+  </div>
+  <div class="btn-div">
+    <ion-button class="continue-btn">Show All Reviews</ion-button>
+  </div>
+  <hr style="height:1px; border-width:0; background-color:#E5B8F4; margin:10px 20px 10px 20px;">
+  <div class="about-heading">Tourist Attractions</div>
+  <div class="review-date">Explore the best attractions in Jupiter </div>
+  <div class="details-container">
+    <div *ngFor="let detail of details" class="details-card">
+      <ion-card class="card2" [style.background-image]="'url(../../../assets/' + detail.backgroundImage + ')'">
+        <!-- <ion-icon class="bookmark" name="heart-outline"></ion-icon> -->
+      </ion-card>
+      <div class="img-details">
+        <span class="card-heading-1">{{ detail.heading1 }}</span>
+        <span class="card-heading-2">{{ detail.heading2 }}</span>
+      </div>
+    </div>
+  </div>
+  <hr style="height:1px; border-width:0; background-color:#E5B8F4; margin:10px 20px 10px 20px;">
+  <div class="more-flights">
+    <div class="about-flights">More Flights</div>
+    <div class="about-tips">Similar trips you would love</div>
+    <ion-icon class="chevron-forward" name="chevron-forward-outline"></ion-icon>
+  </div>
+  <div class="flights-container">
+    <div *ngFor="let flight of flights" class="flight-card">
+      <ion-card class="card-2" [style.background-image]="'url(../../../assets/' + flight.backgroundImage + ')'">
+        <ion-img class="fav-icon" src="../../../assets/ph_heart.png"></ion-img>
+      </ion-card>
+      <div class="flight-details">
+        <span class="card-heading-1">{{ flight.heading1 }}</span>
+        <div class="planet-detail2">
+          <span class="about-flight2">{{ flight.heading2 }}</span>
+          <span class="days2"><ion-icon class="circle-icon2" name="radio-button-on"></ion-icon>{{ flight.heading3
+            }}</span>
+        </div>
+        <div>
+          <span class="price">{{ flight.heading4 }}</span>
+          <span class="trip-way">{{ flight.heading5 }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="submit-btn">
+    <ion-button class="book-btn">Book Ticket</ion-button>
+  </div>
+</ion-content>

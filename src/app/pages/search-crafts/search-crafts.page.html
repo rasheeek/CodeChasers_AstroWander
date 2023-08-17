@@ -1,0 +1,92 @@
+<ion-content [fullscreen]="true">
+  <div class="profile">
+    <span class="h1">Search <br> Hundreds of Crafts at once.</span>
+    <ion-avatar>
+      <img src="../../../assets/profile.svg" />
+    </ion-avatar>
+  </div>
+  <div class="search-container">
+    <div class="searchbar-container">
+      <ion-img class="rocket-img" src="../../../assets/rocket.png"></ion-img>
+      <input class="search-input" type="text" placeholder="From?">
+      <ion-img class="add-img" src="../../../assets/add.png"></ion-img>
+    </div>
+    <ion-img src="../../../assets//compare_arrows.png"></ion-img>
+    <div class="searchbar-container">
+      <ion-img class="rocket-img" src="../../../assets/rocket.png"></ion-img>
+      <input class="search-input" type="text" placeholder="To?">
+      <ion-img class="add-img" src="../../../assets/add.png"></ion-img>
+    </div>
+  </div>
+  <div class="search-container">
+    <div class="searchbar-container">
+      <ion-img class="rocket-img" src="../../../assets/calendar_month.png"></ion-img>
+      <input class="search-input" type="text" placeholder="01/02/2149">
+      <ion-img class="add-img" src="../../../assets/arrow_drop_down.png"></ion-img>
+    </div>
+    <div class="searchbar-container">
+      <ion-img class="rocket-img" src="../../../assets/calendar_month.png"></ion-img>
+      <input class="search-input" type="text" placeholder="01/02/2149">
+      <ion-img class="add-img" src="../../../assets/arrow_drop_down.png"></ion-img>
+    </div>
+    <ion-img class="search-img" src="../../../assets/search.png"></ion-img>
+  </div>
+  <div class="sortby">
+    <span class="options">Sort By:</span>
+    <span [ngClass]="{'selected-option': selectedSortIndex === 0}" (click)="selectedSortIndex = 0" class="option1">Cheapest</span>
+    <span [ngClass]="{'selected-option': selectedSortIndex === 1}" (click)="selectedSortIndex = 1" class="option2">Best</span>
+    <span [ngClass]="{'selected-option': selectedSortIndex === 2}" (click)="selectedSortIndex = 2" class="option3">Quickest</span>
+</div>
+<div *ngFor="let card of cards"  class="main-div">
+  <div class="root-div">
+    <p>{{card.companyName}}</p>
+    <span class="plan-name">{{card.flightCode}}</span>
+    <ion-img class="save-img" src="../../../assets/Save-btn.png"></ion-img>
+    <ion-row>
+      <ion-col class="from-div" size="3">
+        <span class="from-name">EAR</span>
+        <span class="name">Earth</span>
+        <span class="time">12:30 AM</span>
+      </ion-col>
+      <ion-col class="center-div" size="6">
+        <div class="line-div">
+          <svg xmlns="http://www.w3.org/2000/svg" width="173" height="2" viewBox="0 0 173 2" fill="none">
+            <path d="M0.5 1H172.5" stroke="white" stroke-dasharray="5 5" />
+          </svg>
+        </div>
+        <div class="rocket-div">
+          <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
+            <mask id="mask0_113_1036" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="29"
+              height="28">
+              <rect x="28.5" width="28" height="28" transform="rotate(90 28.5 0)" fill="#D9D9D9" />
+            </mask>
+            <g mask="url(#mask0_113_1036)">
+              <path
+                d="M4.02405 8.08296L2.93791 5.32038C2.76377 4.88033 2.80731 4.46692 3.06855 4.08015C3.32977 3.69338 3.69477 3.5 4.16356 3.5L9.27154 3.5C9.71622 3.5 10.1368 3.60515 10.5333 3.81544C10.9298 4.02573 11.249 4.31708 11.4907 4.68948L12.3645 6.00072C10.7011 6.15077 9.26562 6.37608 8.05795 6.67663C6.85027 6.97716 5.50564 7.44594 4.02405 8.08296ZM24.6956 12.243C24.8309 12.3736 24.9275 12.5309 24.9854 12.7148C25.0433 12.8986 25.0723 13.08 25.0723 13.2588C25.0723 13.4376 25.0433 13.6189 24.9854 13.8028C24.9275 13.9867 24.8309 14.1439 24.6956 14.2745C23.4195 15.6302 21.7923 16.7015 19.814 17.4886C17.8358 18.2757 15.7717 18.6692 13.6218 18.6692C12.1199 18.6692 10.7993 18.5463 9.6599 18.3005C8.52049 18.0547 7.22184 17.6577 5.76393 17.1094C5.47396 17.0029 5.22984 16.835 5.03158 16.6057C4.83333 16.3764 4.7342 16.1116 4.7342 15.8115L4.7342 10.7061C4.7342 10.4059 4.83333 10.1424 5.03158 9.91541C5.22984 9.68842 5.47396 9.51933 5.76393 9.40815C7.19393 8.86456 8.48582 8.4687 9.6396 8.22057C10.7934 7.97244 12.1208 7.84837 13.6218 7.84837C15.7717 7.84837 17.8358 8.24191 19.814 9.02898C21.7923 9.81605 23.4195 10.8874 24.6956 12.243ZM13.1729 13.2588C13.1729 13.8865 13.3967 14.423 13.8444 14.8683C14.292 15.3137 14.8297 15.5363 15.4574 15.5363C16.0851 15.5363 16.6216 15.3137 17.0669 14.8683C17.5123 14.423 17.735 13.8865 17.735 13.2588C17.735 12.6311 17.5123 12.0945 17.0669 11.6492C16.6216 11.2039 16.0851 10.9812 15.4574 10.9812C14.8297 10.9812 14.292 11.2039 13.8444 11.6492C13.3967 12.0945 13.1729 12.6311 13.1729 13.2588ZM4.02405 18.4346C5.50564 19.0716 6.85027 19.5404 8.05795 19.8409C9.26562 20.1415 10.7011 20.3668 12.3645 20.5169L11.4907 21.8281C11.249 22.2005 10.9298 22.4918 10.5333 22.7021C10.1368 22.9124 9.71622 23.0176 9.27154 23.0176H4.16356C3.69477 23.0176 3.32977 22.8242 3.06855 22.4374C2.80731 22.0506 2.76377 21.6372 2.93791 21.1972L4.02405 18.4346Z"
+                fill="white" />
+              <path
+                d="M13.1729 13.2588C13.1729 13.8865 13.3967 14.423 13.8444 14.8683C14.292 15.3137 14.8297 15.5363 15.4574 15.5363C16.0851 15.5363 16.6216 15.3137 17.0669 14.8683C17.5123 14.423 17.735 13.8865 17.735 13.2588C17.735 12.6311 17.5123 12.0945 17.0669 11.6492C16.6216 11.2039 16.0851 10.9812 15.4574 10.9812C14.8297 10.9812 14.292 11.2039 13.8444 11.6492C13.3967 12.0945 13.1729 12.6311 13.1729 13.2588Z"
+                fill="#2D033B" />
+            </g>
+          </svg>
+        </div>
+      </ion-col>
+      <ion-col class="to-div" size="3">
+        <span class="from-name">JUP</span>
+        <span class="name">Jupiter</span>
+        <span class="time">08:00 PM</span>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="button-div">
+    <div class="price-div">
+      <span class="price">{{card.price}}</span>
+      <span class="way-div">{{card.way}}</span>
+    </div>
+    <div class="change-btn">
+      <ion-button>Book Now</ion-button>
+    </div>
+  </div>
+</div>
+</ion-content>
