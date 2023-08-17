@@ -1,0 +1,192 @@
+ion-content {
+  --background: linear-gradient(#2B1B59, #73298C);
+
+  .back-button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 24px;
+    margin-left: 24px;
+
+    ion-button {
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
+
+      ion-icon {
+        font-size: 25px;
+        color: #1C1B1F;
+      }
+    }
+  }
+
+  h1 {
+    margin-top: 20px;
+    margin-left: 24px;
+    width: 50%;
+    color: #FFF;
+    --ion-font-family: "Poppins";
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+  .slide-button {
+    width: 90%;
+    margin: 20px auto 0px auto;
+    overflow-x: scroll;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    ion-button {
+      --border-radius: 50px;
+      margin-right: 5px;
+    }
+  }
+
+  .first-div {
+    margin-top: 30px;
+
+    ion-item {
+      width: 94%;
+      margin: auto;
+      --background: transparent !important;
+
+      ion-label {
+        color: #FFF;
+        --font-family: "Poppins";
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+
+    ion-row  {
+      width: 90%;
+      margin: 10px auto 0px auto;
+      overflow-x: scroll !important;
+      white-space: nowrap !important;
+      flex-wrap: nowrap !important;
+
+      ion-card {
+        background-color: rgba(45, 3, 59, 0.30);
+        padding: 10px 10px;
+        border-radius: 10px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+
+        .image-div {
+          height: 120px;
+          width: 120px;
+          background: var(--ion-color-secondary);
+          border-radius: 10px;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        .product-name {
+          color: #FFF;
+          --font-family: "Poppins";
+          font-size: 12px;
+          font-weight: 400;
+          margin-top: 5px;
+        }
+
+        .product-price {
+          color: #FFF;
+          --font-family: "Poppins";
+          font-size: 16px;
+          font-weight: 500;
+          margin-top: 5px;
+          text-align: end;
+        }
+      }
+    }
+  }
+
+  .second-div {
+    margin-top: 30px;
+
+    ion-item {
+      width: 94%;
+      margin: auto;
+      --background: transparent !important;
+
+      ion-label {
+        color: #FFF;
+        --font-family: "Poppins";
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+
+    ion-row  {
+      width: 90%;
+      margin: 10px auto 0px auto;
+      overflow-x: scroll !important;
+      white-space: nowrap !important;
+      flex-wrap: nowrap !important;
+
+      ion-card {
+        background-color: rgba(45, 3, 59, 0.30);
+        padding: 10px 10px;
+        border-radius: 10px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+
+        .image-div {
+          height: 120px;
+          width: 120px;
+          background: var(--ion-color-secondary);
+          border-radius: 10px;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        .product-name {
+          color: #FFF;
+          --font-family: "Poppins";
+          font-size: 12px;
+          font-weight: 400;
+          margin-top: 5px;
+        }
+
+        .product-price {
+          color: #FFF;
+          --font-family: "Poppins";
+          font-size: 16px;
+          font-weight: 500;
+          margin-top: 5px;
+          text-align: end;
+        }
+      }
+    }
+  }
+}
+ion-footer {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  height: 120px;
+  background: #F4E2F7;
+
+  ion-button {
+    margin: auto;
+    width: 40%;
+    border-radius: 10px;
+    color: #F4E2F7;
+    font-size: 16px;
+  }
+}
