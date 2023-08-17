@@ -37,16 +37,16 @@
     <span [ngClass]="{'selected-option': selectedSortIndex === 1}" (click)="selectedSortIndex = 1" class="option2">Best</span>
     <span [ngClass]="{'selected-option': selectedSortIndex === 2}" (click)="selectedSortIndex = 2" class="option3">Quickest</span>
 </div>
-<div *ngFor="let card of cards"  class="main-div">
+<div *ngFor="let ship of planetShips"  class="main-div">
   <div class="root-div">
-    <p>{{card.companyName}}</p>
-    <span class="plan-name">{{card.flightCode}}</span>
+    <p>{{ship.name}}</p>
+    <span class="plan-name">{{ship.id}}</span>
     <ion-img class="save-img" src="../../../assets/Save-btn.png"></ion-img>
     <ion-row>
       <ion-col class="from-div" size="3">
-        <span class="from-name">EAR</span>
-        <span class="name">Earth</span>
-        <span class="time">12:30 AM</span>
+        <span class="from-name">{{ship.fromPlanetCode}}</span>
+        <span class="name">{{ship.fromPlanet}}</span>
+        <span class="time">{{ship.departureDate.toDate() | date : 'hh:mm a' }}</span>
       </ion-col>
       <ion-col class="center-div" size="6">
         <div class="line-div">
@@ -72,19 +72,19 @@
         </div>
       </ion-col>
       <ion-col class="to-div" size="3">
-        <span class="from-name">JUP</span>
-        <span class="name">Jupiter</span>
-        <span class="time">08:00 PM</span>
+         <span class="from-name">{{ship.toPlanetCode}}</span>
+        <span class="name">{{ship.toPlanet}}</span>
+        <span class="time">{{ship.arrivalDate.toDate() | date : 'hh:mm a' }}</span>
       </ion-col>
     </ion-row>
   </div>
 
   <div class="button-div">
     <div class="price-div">
-      <span class="price">{{card.price}}</span>
-      <span class="way-div">{{card.way}}</span>
+      <span class="price">{{ship.price}}k</span>
+      <span class="way-div">{{ship.type == 1 ? 'One way round':'Two way round'}}</span>
     </div>
-    <div class="change-btn" (click)="book()">
+    <div class="change-btn" (click)="book(ship)">
       <ion-button>Book Now</ion-button>
     </div>
   </div>

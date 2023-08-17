@@ -7,43 +7,76 @@
 
   <h1>Add Astro Explorers</h1>
   <p>Please scan Passengers Details of every added passengers.</p>
-  <div class="main-div">
-    <span class="adult-details">Adult 1/3</span>
 
-    <div class="adult-details-main">
-      <div class="image-detail">
-        <div class="adult-image">
-          <!-- <img src="" /> -->
-        </div>
-        <div class="user-detail">
-          <span class="user-name">Elon Musk</span>
-          <span class="user-age">19 YRS</span>
-        </div>
-      </div>
-      <div class="sbmt-btn">
-        <ion-button size="small" color="secondary">
-          <ion-icon name="checkmark-outline"></ion-icon>
-        </ion-button>
-      </div>
-    </div>
+  <div *ngIf="noOfAdults > 0"  class="main-div" class="ion-padding">
+    <p  class="adult-details" style="color: #fff; margin-left: 0px;">Adults</p>
+
+    <ion-item   *ngFor="let item of adults ; let i =index " [color]="item.isScanned? 'primary' :'secondary'" class="passenger-item" lines="none">
+      <ion-list>
+        <ion-label [color]="item.isScanned? 'secondary' :'primary'" class="l1">{{item.isScanned? item.name : 'Adult ' + (i + 1) + '/' + adults.length }}</ion-label>
+        <ion-label *ngIf="item.isScanned" [color]="item.isScanned? 'secondary' :'primary'" class="l2">{{item.age}} Years</ion-label>
+      </ion-list>
+      <ion-button *ngIf="item.isScanned"   [color]=" 'secondary'" icon-only slot="end">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+      <ion-button (click)="openQR(adults, i)"  *ngIf="!item.isScanned"  [color]="'primary'" icon-only slot="end">
+       Scan
+      </ion-button>
+    </ion-item>
+ 
   </div>
 
 
-  <div class="scan-detail">
+  <div *ngIf="noOfChildren > 0"  class="main-div" class="ion-padding">
+    <p  class="adult-details" style="color: #fff; margin-left: 0px;">Childred</p>
+
+ 
+    <ion-item   *ngFor="let item of children ; let i =index " [color]="item.isScanned? 'primary' :'secondary'" class="passenger-item" lines="none">
+      <ion-list>
+        <ion-label [color]="item.isScanned? 'secondary' :'primary'" class="l1">{{item.isScanned? 'Elon Musk' : 'Child ' + (i + 1) + '/' + children.length }}</ion-label>
+        <ion-label *ngIf="item.isScanned" [color]="item.isScanned? 'secondary' :'primary'" class="l2">19 Years</ion-label>
+      </ion-list>
+      <ion-button *ngIf="item.isScanned"   [color]=" 'secondary'" icon-only slot="end">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+      <ion-button (click)="item.isScanned = true" *ngIf="!item.isScanned"  [color]="'primary'" icon-only slot="end">
+       Scan
+      </ion-button>
+    </ion-item>
+ 
+  </div>
+
+
+  <div *ngIf="noOfInfants > 0"  class="main-div" class="ion-padding">
+    <p  class="adult-details" style="color: #fff; margin-left: 0px;">Infants</p>
+
+    <ion-item   *ngFor="let item of infants ; let i =index " [color]="item.isScanned? 'primary' :'secondary'" class="passenger-item" lines="none">
+      <ion-list>
+        <ion-label [color]="item.isScanned? 'secondary' :'primary'" class="l1">{{item.isScanned? 'Elon Musk' : 'Infant ' + (i + 1) + '/' + infants.length }}</ion-label>
+        <ion-label *ngIf="item.isScanned" [color]="item.isScanned? 'secondary' :'primary'" class="l2">19 Years</ion-label>
+      </ion-list>
+      <ion-button *ngIf="item.isScanned"   [color]=" 'secondary'" icon-only slot="end">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+      <ion-button (click)="item.isScanned = true" *ngIf="!item.isScanned"  [color]="'primary'" icon-only slot="end">
+       Scan
+      </ion-button>
+    </ion-item>
+ 
+  </div>
+
+
+  <!-- <div class="scan-detail">
     <span class="adult-scan-details">Adult 1/3</span>
     <div class="scan-button" (click)="scan()">
-      <ion-button size="small">
-        Scan
-      </ion-button>
+      <ion-button size="small"> Scan </ion-button>
     </div>
   </div>
 
   <div class="scan-detail">
     <span class="adult-scan-details">Adult 3/3</span>
     <div class="scan-button">
-      <ion-button size="small">
-        Scan
-      </ion-button>
+      <ion-button size="small"> Scan </ion-button>
     </div>
   </div>
 
@@ -52,17 +85,12 @@
     <div class="scan-detail">
       <span class="adult-scan-details">Infants 3/1</span>
       <div class="scan-button">
-        <ion-button size="small">
-          Scan
-        </ion-button>
+        <ion-button size="small"> Scan </ion-button>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="confirm-submit" (click)="confirmDetails()">
-    <ion-button>
-      Confirm
-    </ion-button>
+    <ion-button> Confirm </ion-button>
   </div>
-
 </ion-content>

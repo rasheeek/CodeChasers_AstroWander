@@ -16,7 +16,7 @@ export class UserService {
 
   public getUserDetailsById(id : string): Observable<any> {
     return new Observable<any>((observer) => {
-      const docRef = this.afs.doc(`users/${id}`);
+      const docRef = this.afs.doc(`passenger_details/${id}`);
       const userData = docRef.get().subscribe(
         (res: any) => {
           observer.next(res.data());

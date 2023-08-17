@@ -1,6 +1,6 @@
 export interface IPlanetShip {
     name: string,
-    id: string,
+    id?: string,
     fromPlanet: string,
     toPlanet: string,
     fromPlanetCode: string,
@@ -9,4 +9,12 @@ export interface IPlanetShip {
     type: 1 | 2,
     departureDate: Date | any,
     arrivalDate: Date | any,
+}
+
+export interface IBookings{
+    addedDate : Date | any,
+    uid  : string,
+    noOfAdults : number, 
+    noOfChildren : number,
+    noOfInfants : number
 }
