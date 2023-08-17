@@ -28,7 +28,7 @@
     </ion-item>
     <ion-row>
       <ion-col *ngFor="let item of snacks">
-        <ion-card>
+        <ion-card (click)="viewSnack()">
           <div class="image-div">
             <!-- <img src="" /> -->
           </div>

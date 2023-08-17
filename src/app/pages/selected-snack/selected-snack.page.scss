@@ -1,0 +1,138 @@
+ion-content {
+    --background: linear-gradient(#2B1B59, #73298C);
+}
+
+.img-div {
+    --width: 390px;
+    --height: 390px;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back-button {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+
+    ion-button {
+        width: 40px;
+        height: 40px;
+        --border-radius: 12px;
+
+        ion-icon {
+            font-size: 35px;
+            color: #1C1B1F;
+        }
+    }
+}
+
+.h1-class {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.h1 {
+    color: #FFF;
+    --font-family: "Poppins";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+}
+
+.eclips-class {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+ion-img {
+    margin-right: 2px;
+}
+
+.content {
+    margin-left: 20px;
+    margin-top: 10px;
+    color: #FFF;
+    --font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.quantity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+.snack-quantity {
+    display: flex;
+
+    .add-remove-btn {
+        height: 30px;
+        width: 30px;
+        background: #E5B8F4;
+        border-radius: 8px;
+        color: #2D033B;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        --ion-font-family: "Poppins";
+        font-size: 10px;
+        font-weight: 400;
+        margin-right: 10px;
+    }
+
+    .value {
+        margin-right: 10px;
+        margin-top: 5px;
+        color: #E5B8F4;
+    }
+}
+
+.count {
+    display: flex;
+    width: 145px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: var(--primary-color-4, #2D033B);
+    color: var(--primary-color-1, #E5B8F4);
+}
+
+.submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.add-bill {
+    --background: var(--primary-color-1, #E5B8F4);
+    text-transform: capitalize;
+    color: var(--primary-color-4, #2D033B);
+    --font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    width: 250px;
+    height: 50px;
+    padding: 10px;
+    --border-radius: 10px;
+}
