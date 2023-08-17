@@ -1,5 +1,5 @@
-<ion-content [fullscreen]="true">
-  <div class="header-class" mode="md">
+<ion-content [fullscreen]="true" mode="md">
+  <div class="header-class">
     <ion-img src="../../../assets/logo.png"></ion-img>
     <ion-title>
       <span class="bold-heading">Astro</span>
@@ -9,7 +9,7 @@
       <img src="../../../assets/profile.svg" />
     </ion-avatar>
   </div>
-    <ion-searchbar class="search-class" placeholder="Search your destination" mode="md">
+    <ion-searchbar class="search-class" placeholder="Search your destination">
       <div class="searchbar-container">
         <ion-img class="searchbar-img" src="../../../assets/instant_mix.svg"></ion-img>
       </div>
@@ -18,7 +18,7 @@
     <span class="main-heading">Discover</span>
     <span class="sub-heading">Similar trips you would love</span>
   </div>
-  <div class="planets-container" (click)="overview()" mode="md">
+  <div class="planets-container" (click)="overview()">
     <div *ngFor="let planet of planets" class="card">
       <ion-card class="card-1" [style.background-image]="'url(../../../assets/' + planet.backgroundImage + ')'">
         <div class="card-content">
@@ -30,14 +30,14 @@
       </ion-card>
     </div>
   </div>
-  <div class="button-container" mode="md">
+  <div class="button-container">
     <ion-button>Explore Now</ion-button>
   </div>
   <div class="content-header">
     <span class="main-heading">More Flights</span>
     <span class="sub-heading">Similar trips you would love</span>
   </div>
-  <div class="flights-container" mode="md">
+  <div class="flights-container">
     <div *ngFor="let flight of flights" class="flight-card">
       <ion-card class="card-2" [style.background-image]="'url(../../../assets/' + flight.backgroundImage + ')'">
         <ion-img class="fav-icon" src="../../../assets/ph_heart.png"></ion-img>
