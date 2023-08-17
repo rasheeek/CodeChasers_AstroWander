@@ -39,6 +39,13 @@ export class PlanetOverviewPage implements OnInit {
     { backgroundImage: 'mercuryflight.png', heading1: 'Earth', heading2: 'Air Shuttle 150', heading3: '1 day travel ', heading4: '$1750k', heading5: 'Two way trip'  },
   ];
 
+  cards = [
+    { companyName: 'CosmicJet Airlines', flightCode: 'CJ-2024A712', price: '2800k', way: 'Two way round' },
+    { companyName: 'NebulaAir Voyages', flightCode: 'NV-3056B934', price: '3100k', way: 'Two way round' },
+    { companyName: 'StarHopper Excursion', flightCode: 'SH-4028C587', price: '4900k', way: 'Two way round' },
+    { companyName: 'AstroBreeze Airlines', flightCode: 'AB-7034F109', price: '5100k', way: 'Two way round' },
+  ];
+
   constructor(
     private router: Router,
   ) { }
@@ -48,6 +55,14 @@ export class PlanetOverviewPage implements OnInit {
 
   back(){
     this.router.navigate(['/tabs/home'])
+  }
+
+  book(){
+    this.router.navigate(['/selected-flight'])
+  }
+
+  toggleSelectedButtonIndex(index: number) {
+    this.selectedButtonIndex = index;
   }
 
 }
