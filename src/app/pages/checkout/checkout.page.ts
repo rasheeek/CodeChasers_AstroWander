@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BookingService } from 'src/app/shared/services/booking.service';
+import { IPlanetShip } from 'src/app/shared/types/type.model';
 
 @Component({
   selector: 'app-checkout',
@@ -7,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./checkout.page.scss'],
 })
 export class CheckoutPage implements OnInit {
+
+  selectedShip : IPlanetShip | null = null;
 
   passenger = [
     { name: "Stellar Cheddar Crisps", price: "850k", quantity: "02" },
@@ -16,9 +20,14 @@ export class CheckoutPage implements OnInit {
 
   constructor(
     private router: Router,
+    private bookingService : BookingService,
   ) { }
 
   ngOnInit() {
+  }
+
+  ionViewWillEnter(){
+    this.selectedShip = this.bookingService.selectedShip;
   }
 
   back(){
