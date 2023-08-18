@@ -9,6 +9,7 @@ export interface IPlanetShip {
     type: 1 | 2,
     departureDate: Date | any,
     arrivalDate: Date | any,
+    [key: string]: any;
 }
 
 export interface IBookings{

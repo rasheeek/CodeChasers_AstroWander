@@ -12,6 +12,8 @@ import { IPlanetShip } from 'src/app/shared/types/type.model';
 export class SearchCraftsPage implements OnInit {
 
   selectedSortIndex = 0;
+  fromPlanetFilter: string = '';
+  toPlanetFilter: string = '';
 
   planetShips : IPlanetShip[] = [];
 
@@ -45,7 +47,6 @@ export class SearchCraftsPage implements OnInit {
     this.bookingService.selectedShip = selectedShip;
     this.router.navigate(['/selected-flight'])
   }
-
 
 
 }

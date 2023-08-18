@@ -6,13 +6,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { FilterByPlanetPipe } from './pipes/filter-by-planet.pipe';
 
 @NgModule({
   declarations: [
     MainHeaderComponent,
     ItemSkeletonComponent,
     HomeSkeletonCardComponent,
-    OneLineItemSkeletonComponent
+    OneLineItemSkeletonComponent,
+    FilterByPlanetPipe
   ],
   imports: [ReactiveFormsModule, CommonModule, FormsModule, IonicModule],
   exports: [
@@ -20,7 +22,8 @@ import { IonicModule } from '@ionic/angular';
     MainHeaderComponent,
     ItemSkeletonComponent,
     HomeSkeletonCardComponent,
-    OneLineItemSkeletonComponent
+    OneLineItemSkeletonComponent,
+    FilterByPlanetPipe
   ],
 })
 export class SharedModule {}
