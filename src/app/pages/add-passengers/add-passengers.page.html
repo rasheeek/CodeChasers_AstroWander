@@ -23,14 +23,14 @@
        Scan
       </ion-button>
     </ion-item>
- 
+
   </div>
 
 
   <div *ngIf="noOfChildren > 0"  class="main-div" class="ion-padding">
     <p  class="adult-details" style="color: #fff; margin-left: 0px;">Childred</p>
 
- 
+
     <ion-item   *ngFor="let item of children ; let i =index " [color]="item.isScanned? 'primary' :'secondary'" class="passenger-item" lines="none">
       <ion-list>
         <ion-label [color]="item.isScanned? 'secondary' :'primary'" class="l1">{{item.isScanned? 'Elon Musk' : 'Child ' + (i + 1) + '/' + children.length }}</ion-label>
@@ -39,11 +39,11 @@
       <ion-button *ngIf="item.isScanned"   [color]=" 'secondary'" icon-only slot="end">
         <ion-icon name="checkmark"></ion-icon>
       </ion-button>
-      <ion-button (click)="item.isScanned = true" *ngIf="!item.isScanned"  [color]="'primary'" icon-only slot="end">
+      <ion-button (click)="openQR(adults, i)" *ngIf="!item.isScanned"  [color]="'primary'" icon-only slot="end">
        Scan
       </ion-button>
     </ion-item>
- 
+
   </div>
 
 
@@ -58,11 +58,11 @@
       <ion-button *ngIf="item.isScanned"   [color]=" 'secondary'" icon-only slot="end">
         <ion-icon name="checkmark"></ion-icon>
       </ion-button>
-      <ion-button (click)="item.isScanned = true" *ngIf="!item.isScanned"  [color]="'primary'" icon-only slot="end">
+      <ion-button (click)="openQR(adults, i)" *ngIf="!item.isScanned"  [color]="'primary'" icon-only slot="end">
        Scan
       </ion-button>
     </ion-item>
- 
+
   </div>
 
 
