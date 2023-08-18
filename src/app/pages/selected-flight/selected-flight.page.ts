@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 import { BookingService } from 'src/app/shared/services/booking.service';
 import { IPlanetShip } from 'src/app/shared/types/type.model';
 
@@ -20,7 +21,8 @@ export class SelectedFlightPage implements OnInit {
 
   constructor(
     private router: Router,
-    private bookingService : BookingService
+    private bookingService : BookingService,
+    private alertCtrl: AlertController,
   ) { }
 
   ngOnInit() {
@@ -34,11 +36,26 @@ export class SelectedFlightPage implements OnInit {
     this.router.navigate(['/tabs/search-crafts']);
   }
 
-  continue(){
-    this.bookingService.noOfAdults = this.passenger[0].quantity;
-    this.bookingService.noOfChildren = this.passenger[1].quantity;
-    this.bookingService.noOfInfants = this.passenger[2].quantity;
-    this.router.navigate(['/add-passengers']);
+  continue() {
+    if (this.passenger[0].quantity === 0 && this.passenger[1].quantity === 0 && this.passenger[2].quantity === 0) {
+      this.showQuantityAlert('Please select at least one passenger quantity.');
+    } else if (this.passenger[0].quantity === 0 && this.passenger[2].quantity > 0) {
+      this.showQuantityAlert('Please select at least one adult passenger.');
+    } else {
+      this.bookingService.noOfAdults = this.passenger[0].quantity;
+      this.bookingService.noOfChildren = this.passenger[1].quantity;
+      this.bookingService.noOfInfants = this.passenger[2].quantity;
+      this.router.navigate(['/add-passengers']);
+    }
+  }
+  
+  async showQuantityAlert(message: string) {
+    const alert = await this.alertCtrl.create({
+      header: 'Select Quantity',
+      message: message,
+      buttons: ['OK']
+    });
+    await alert.present();
   }
 
 
