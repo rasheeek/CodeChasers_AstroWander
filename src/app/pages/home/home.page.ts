@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
+import { PlanetsService } from 'src/app/shared/services/planets.service';
+import { IFlights, IPlanet } from 'src/app/shared/types/type.model';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +11,10 @@ import { Router } from '@angular/router';
 })
 export class HomePage implements OnInit {
 
-  planets = [
+  planets: IPlanet[] = [];
+  flights: IFlights[] = [];
+
+  planetsDetails = [
     { backgroundImage: 'mars.png', heading1: 'Mars', heading2: '1 Day travel' },
     { backgroundImage: 'pluto.png', heading1: 'Pluto', heading2: '1 Day travel' },
     { backgroundImage: 'jupiter.jpeg', heading1: 'Jupiter', heading2: '1 Day travel' },
@@ -20,7 +26,7 @@ export class HomePage implements OnInit {
     { backgroundImage: 'earth.jpg', heading1: 'Earth', heading2: '1 Day travel' },
   ];
 
-  flights = [
+  flightsDetails = [
     { backgroundImage: 'plutoflight.png', heading1: 'Pluto', heading2: 'Air Shuttle 150 ', heading3: '1 day travel ', heading4: '$1750k', heading5: 'Two way trip' },
     { backgroundImage: 'mercuryflight.png', heading1: 'Mercury', heading2: 'Air Shuttle 01 ', heading3: '1 day travel ', heading4: '$8500k', heading5: 'Two way trip'  },
     { backgroundImage: 'plutoflight.png', heading1: 'Mars', heading2: 'Air Shuttle 150', heading3: '1 day travel ', heading4: '$1750k', heading5: 'Two way trip'  },
@@ -34,9 +40,34 @@ export class HomePage implements OnInit {
 
   constructor(
     private router: Router,
+    private planetService : PlanetsService,
+    private loadingCtrl : LoadingController,
   ) { }
 
   ngOnInit() {
+    this.loadingCtrl.create().then(loadingEl => {
+      loadingEl.present();
+      this.planetService.getAllPlanets().subscribe(res=> {
+        console.log("res", res);
+        
+        this.planets = res;
+        loadingEl.dismiss();
+      }, (err=>{
+        loadingEl.dismiss();
+      }))
+    });
+
+    this.loadingCtrl.create().then(loadingEl => {
+      loadingEl.present();
+      this.planetService.getAllFlights().subscribe(res=> {
+        console.log("res", res);
+        
+        this.flights = res;
+        loadingEl.dismiss();
+      }, (err=>{
+        loadingEl.dismiss();
+      }))
+    })
   }
 
   overview(){

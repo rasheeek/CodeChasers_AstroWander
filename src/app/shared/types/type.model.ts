@@ -18,3 +18,18 @@ export interface IBookings{
     noOfChildren : number,
     noOfInfants : number
 }
+
+export interface IPlanet{
+    name: string,
+    day: number,
+    image: string,
+}
+
+export interface IFlights{
+    image: string,
+    planetName: string,
+    code: string,
+    day: number,
+    price: number,
+    type: 1 | 2,
+}
