@@ -22,7 +22,7 @@ export class CheckoutPage implements OnInit {
   }
 
   back(){
-    this.router.navigate(['/snack-list']);
+    this.router.navigate(['/add-passengers']);
   }
 
   pay(){

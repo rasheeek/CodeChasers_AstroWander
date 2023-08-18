@@ -29,7 +29,7 @@ export class AddPassengersPage implements OnInit {
     private loadingCtrl : LoadingController,
     private userService : UserService,
     private alertService : AlertService
-    
+
   ) { }
 
   ngOnInit() {
@@ -59,7 +59,7 @@ export class AddPassengersPage implements OnInit {
   }
 
   confirmDetails(){
-    this.router.navigate(['/seat-booking']);
+    this.router.navigate(['/checkout']);
   }
 
 
@@ -70,7 +70,7 @@ export class AddPassengersPage implements OnInit {
     modal.onDidDismiss().then(data=>{
         if(data.data){
           this.loadingCtrl.create().then(loadingEl=>{
-            
+
             loadingEl.present();
             this.userService.getUserDetailsById(data.data).subscribe(res=>{
               if(res && res.name){
@@ -84,7 +84,7 @@ export class AddPassengersPage implements OnInit {
             },(err=>{
               this.alertService.showAlert("Error", "Invalid QR", ['Okay'])
             }))
-  
+
           })
         }
     })
