@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { FilterByPlanetPipe } from './pipes/filter-by-planet.pipe';
+import { DateRangeFilterPipe } from './pipes/date-range-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FilterByPlanetPipe } from './pipes/filter-by-planet.pipe';
     ItemSkeletonComponent,
     HomeSkeletonCardComponent,
     OneLineItemSkeletonComponent,
-    FilterByPlanetPipe
+    FilterByPlanetPipe,
+    DateRangeFilterPipe
   ],
   imports: [ReactiveFormsModule, CommonModule, FormsModule, IonicModule],
   exports: [
@@ -23,7 +25,8 @@ import { FilterByPlanetPipe } from './pipes/filter-by-planet.pipe';
     ItemSkeletonComponent,
     HomeSkeletonCardComponent,
     OneLineItemSkeletonComponent,
-    FilterByPlanetPipe
+    FilterByPlanetPipe,
+    DateRangeFilterPipe
   ],
 })
 export class SharedModule {}

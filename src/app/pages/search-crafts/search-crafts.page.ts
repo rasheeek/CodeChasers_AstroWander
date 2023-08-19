@@ -14,8 +14,11 @@ export class SearchCraftsPage implements OnInit {
   selectedSortIndex = 0;
   fromPlanetFilter: string = '';
   toPlanetFilter: string = '';
+  startDate: string = '';
+  occasionStartDate: string = '';
+  occasionEndDate: string = '';
 
-  planetShips : IPlanetShip[] = [];
+  planetShips: IPlanetShip[] = [];
 
   cards = [
     { companyName: 'CosmicJet Airlines', flightCode: 'CJ-2024A712', price: '2800k', way: 'Two way round' },
@@ -26,27 +29,38 @@ export class SearchCraftsPage implements OnInit {
 
   constructor(
     private router: Router,
-    private bookingService : BookingService,
-    private loadingCtrl : LoadingController
+    private bookingService: BookingService,
+    private loadingCtrl: LoadingController
   ) { }
 
   ngOnInit() {
-    this.loadingCtrl.create().then(loadingEl=>{
+    this.loadingCtrl.create().then(loadingEl => {
       loadingEl.present();
-      this.bookingService.getAllShips().subscribe(res=>{
+      this.bookingService.getAllShips().subscribe(res => {
         console.log("All ships", res);
         this.planetShips = res;
         loadingEl.dismiss();
-      },(err=>{
+      }, (err => {
         loadingEl.dismiss();
       }))
     })
   }
 
-  book(selectedShip : IPlanetShip){
+  book(selectedShip: IPlanetShip) {
     this.bookingService.selectedShip = selectedShip;
     this.router.navigate(['/selected-flight'])
   }
 
+  setStartDate(dateValue: any) {
+    // this.occasionStartDate = dateValue; 
+    const selectedDate = new Date(dateValue);
+    this.occasionStartDate = selectedDate.toISOString().split('T')[0];
+  }
+
+  setEndDate(dateValue: any) {
+    // this.occasionEndDate = dateValue; 
+    const selectedDate = new Date(dateValue);
+    this.occasionEndDate = selectedDate.toISOString().split('T')[0];
+  }
 
 }

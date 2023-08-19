@@ -175,6 +175,13 @@ ion-avatar {
                     font-size: 10px;
                     font-weight: 400;
                 }
+
+                .date{
+                    color: #C4C3C4;
+                    --font-family: "Poppins";
+                    font-size: 10px;
+                    font-weight: 400;
+                }
             }
 
             .center-div {
@@ -192,7 +199,7 @@ ion-avatar {
 
                 .rocket-div {
                     position: absolute;
-                    bottom: 8px;
+                    bottom: 13px;
                 }
             }
 
@@ -217,6 +224,13 @@ ion-avatar {
                 }
 
                 .time {
+                    color: #C4C3C4;
+                    --font-family: "Poppins";
+                    font-size: 10px;
+                    font-weight: 400;
+                }
+
+                .date{
                     color: #C4C3C4;
                     --font-family: "Poppins";
                     font-size: 10px;
@@ -281,3 +295,13 @@ ion-avatar {
         }
     }
 }
+
+ion-modal {
+    --width: 290px;
+    --height: 382px;
+    --border-radius: 8px;
+  }
+  
+  ion-modal ion-datetime {
+    height: 382px;
+  }
