@@ -67,7 +67,10 @@ const routes: Routes = [
   {
      path: 'selected-flight',
     loadChildren: () => import('./pages/selected-flight/selected-flight.module').then( m => m.SelectedFlightPageModule)
-
+  },
+  {
+    path: 'userprofile',
+    loadChildren: () => import('./pages/userprofile/userprofile.module').then( m => m.UserprofilePageModule)
   },
   {
     path: 'selected-snack',
