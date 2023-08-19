@@ -89,8 +89,14 @@
   </ion-row> -->
   <!-- <div class="border"></div> -->
   <ion-row class="footer-row">
+    <ion-col class="total-title" size="6">{{noOfAdults}}  Adults</ion-col>
+    <ion-col class="total-price" size="6">{{selectedShip.price * noOfAdults}}k</ion-col>
+    <ion-col class="total-title" size="6">{{noOfChildren}} Children</ion-col>
+    <ion-col class="total-price" size="6">{{(selectedShip.price/2) * noOfChildren}}k</ion-col>
+    <ion-col class="total-title" size="6">{{noOfInfants}} Infants</ion-col>
+    <ion-col class="total-price" size="6">0k</ion-col>
     <ion-col class="total-title" size="6">Total</ion-col>
-    <ion-col class="total-price" size="6">{{selectedShip?.price}}k</ion-col>
+    <ion-col class="total-price" size="6">{{(selectedShip.price * noOfAdults) + (selectedShip.price/2 * noOfChildren)}}k</ion-col>
   </ion-row>
   <div class="pay-btn" (click)="pay()">
     <ion-button>Pay</ion-button>

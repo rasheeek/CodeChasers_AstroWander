@@ -276,9 +276,9 @@ ion-content {
 }
 
 ion-footer {
-  height: 212px;
+  // height: 212px;
   background: #F4E2F7;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 
   ion-row {
     display: flex;
@@ -306,7 +306,7 @@ ion-footer {
   }
 
   .footer-row {
-    display: flex;
+    // display: flex;
     align-items: center;
     margin-top: 15px;
 
@@ -329,7 +329,7 @@ ion-footer {
 
   .pay-btn {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     margin-top: 50px;
 

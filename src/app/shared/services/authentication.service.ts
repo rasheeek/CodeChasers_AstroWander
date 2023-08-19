@@ -110,7 +110,7 @@ export class AuthenticationService {
     await this.afAuth.signOut();
     this.userSubscription.unsubscribe();
     localStorage.removeItem("id");
-    this.navCtrl.navigateRoot("/login");
+    this.navCtrl.navigateRoot("");
   }
 
 

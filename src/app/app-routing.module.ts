@@ -75,6 +75,10 @@ const routes: Routes = [
   {
     path: 'selected-snack',
     loadChildren: () => import('./pages/selected-snack/selected-snack.module').then( m => m.SelectedSnackPageModule)
+  },
+  {
+    path: 'mytrips',
+    loadChildren: () => import('./pages/mytrips/mytrips.module').then( m => m.MytripsPageModule)
   }
 
 ];

@@ -60,7 +60,7 @@ export class RegisterPage implements OnInit {
             };
             this.userService.addUser(data, res.user.uid).subscribe(
               (resp) => {
-                console.log(resp);
+                console.log(resp);  
                 loadingEl.dismiss();
                 this.signupForm.reset();
                 localStorage.setItem('id', res.user.uid);

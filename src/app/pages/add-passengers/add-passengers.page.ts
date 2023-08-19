@@ -36,6 +36,9 @@ export class AddPassengersPage implements OnInit {
   }
 
   ionViewWillEnter(){
+    this.adults = [];
+    this.children = [];
+    this.infants = [];
     this.noOfAdults = this.bookingService.noOfAdults;
     for(let i =0; i < this.noOfAdults; i++){
       this.adults.push({isScanned : false})

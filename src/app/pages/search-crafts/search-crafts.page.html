@@ -51,14 +51,14 @@
   </ion-modal>
   <div class="sortby">
     <span class="options">Sort By:</span>
-    <span [ngClass]="{'selected-option': selectedSortIndex === 0}" (click)="selectedSortIndex = 0"
+    <span [ngClass]="{'selected-option': selectedSortIndex === 0}" (click)="selectedSortIndex = 0;sortChanged();"
       class="option1">Cheapest</span>
-    <span [ngClass]="{'selected-option': selectedSortIndex === 1}" (click)="selectedSortIndex = 1"
-      class="option2">Best</span>
-    <span [ngClass]="{'selected-option': selectedSortIndex === 2}" (click)="selectedSortIndex = 2"
+    <!-- <span [ngClass]="{'selected-option': selectedSortIndex === 1}" (click)="selectedSortIndex = 1"
+      class="option2">Best</span> -->
+    <span [ngClass]="{'selected-option': selectedSortIndex === 2}" (click)="selectedSortIndex = 2; sortChanged();"
       class="option3">Quickest</span>
   </div>
-  <div *ngFor="let ship of planetShips | dateRangeFilter: occasionStartDate : occasionEndDate | filterByPlanet: fromPlanetFilter : 'fromPlanet' : toPlanetFilter : 'toPlanet'"
+  <div *ngFor="let ship of planetShips | dateRangeFilter: occasionStartDate : occasionEndDate | filterByPlanet: fromPlanetFilter : 'fromPlanet' : toPlanetFilter : 'toPlanet' "
     class="main-div">
     <div class="root-div">
       <p>{{ship.name}}</p>

@@ -5,7 +5,7 @@
     </ion-button>
   </div>
   <h1>Booking Success</h1>
-  <p>Your flight booked from Earth to Mars success for 2 seats</p>
+  <p>Your flight booked from {{selectedShip.fromPlanet}} to {{selectedShip.toPlanet}} success for {{noOfTickets}} seats</p>
 
   <ion-card>
     <ion-row class="heading">
@@ -14,19 +14,19 @@
     <ion-row class="details">
       <ion-col class="destination" size="6">
          <span class="text-header">Destination</span>
-         <span class="text">Earth to Mars</span>
+         <span class="text">{{selectedShip.fromPlanet}} to {{selectedShip.toPlanet}}</span>
       </ion-col>
       <ion-col class="payment" size="6">
         <span class="text-header">Payment Date</span>
-        <span class="text">12 August 2023</span>
+        <span class="text">{{today| date : 'dd MMMM YYYY'}}</span>
       </ion-col>
     </ion-row>
     <ion-row class="seat-details">
       <span class="text-header">Seats</span>
-      <span class="text">2 Seats - Premium Class</span>
+      <span class="text">{{noOfTickets}} Seats - Premium Class</span>
     </ion-row>
     <ion-row class="order-details">
-      <span class="order-text">Order No. 12222333444555</span>
+      <span class="order-text">Order No. {{bookingId}}</span>
     </ion-row>
     <div class="barcode-image">
       <img src="../../../assets/icon/Barcode.svg">

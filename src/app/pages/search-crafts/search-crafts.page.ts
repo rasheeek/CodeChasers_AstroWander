@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import { utcToZonedTime } from 'date-fns-tz';
@@ -22,6 +22,7 @@ export class SearchCraftsPage implements OnInit {
   endDateVal: string = '';
 
   planetShips: IPlanetShip[] = [];
+  
 
   cards = [
     {
@@ -53,7 +54,8 @@ export class SearchCraftsPage implements OnInit {
   constructor(
     private router: Router,
     private bookingService: BookingService,
-    private loadingCtrl: LoadingController
+    private loadingCtrl: LoadingController,
+    private changeDetector : ChangeDetectorRef
   ) {}
 
   ngOnInit() {
@@ -63,6 +65,7 @@ export class SearchCraftsPage implements OnInit {
         (res) => {
           console.log('All ships', res);
           this.planetShips = res;
+          this.sortChanged();
           loadingEl.dismiss();
         },
         (err) => {
@@ -103,4 +106,23 @@ export class SearchCraftsPage implements OnInit {
     );
     this.endDateVal = this.getDateStringWithoutTimeZone(selectedDate);
   }
+
+
+  sortChanged(){
+    console.log(this.selectedSortIndex);
+    
+    if (this.selectedSortIndex == 0) {
+      this.planetShips = [...this.planetShips].sort((a, b) => a.price - b.price);
+    } else if (this.selectedSortIndex == 2) {
+      this.planetShips = [...this.planetShips].sort((a, b) => {
+        const durationA = Math.abs(a.arrivalDate.toDate() - a.departureDate.toDate()) / (1000 * 60 * 60 * 24);
+        const durationB = Math.abs(b.arrivalDate.toDate() - b.departureDate.toDate()) / (1000 * 60 * 60 * 24);
+        return durationA - durationB;
+      });
+    }
+    console.log(this.planetShips);
+    this.changeDetector.detectChanges();
+  }
+
+
 }

@@ -12,13 +12,7 @@ export interface IPlanetShip {
     [key: string]: any;
 }
 
-export interface IBookings{
-    addedDate : Date | any,
-    uid  : string,
-    noOfAdults : number, 
-    noOfChildren : number,
-    noOfInfants : number
-}
+
 
 export interface IPlanet{
     name: string,
@@ -33,4 +27,15 @@ export interface IFlights{
     day: number,
     price: number,
     type: 1 | 2,
+}
+
+
+
+export interface IBooking{
+    addedDate : Date | any,
+    uid  : string,
+    noOfAdults : number, 
+    noOfChildren : number,
+    noOfInfants : number,
+    shipId : string, 
 }
