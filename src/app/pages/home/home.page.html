@@ -1,4 +1,4 @@
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" mode="md">
   <div class="header-class">
     <ion-img src="../../../assets/logo.png"></ion-img>
     <ion-title>
@@ -20,10 +20,10 @@
   </div>
   <div class="planets-container">
     <div *ngFor="let planet of planets" class="card">
-      <ion-card class="card-1" [style.background-image]="'url(../../../assets/' + planet.backgroundImage + ')'">
+      <ion-card class="card-1" [style.background-image]="'url(' + planet.image + ')'" (click)="overview()">
         <div class="card-content">
-          <span class="card-heading-1">{{ planet.heading1 }}</span>
-          <span class="card-heading-2">{{ planet.heading2 }}
+          <span class="card-heading-1">{{ planet.name }}</span>
+          <span class="card-heading-2">{{ planet.day }} Day travel
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </span>
         </div>
@@ -39,19 +39,19 @@
   </div>
   <div class="flights-container">
     <div *ngFor="let flight of flights" class="flight-card">
-      <ion-card class="card-2" [style.background-image]="'url(../../../assets/' + flight.backgroundImage + ')'">
+      <ion-card class="card-2" [style.background-image]="'url(' + flight.image + ')'">
         <ion-img class="fav-icon" src="../../../assets/ph_heart.png"></ion-img>
       </ion-card>
       <div class="flight-details">
-        <span class="card-heading-1">{{ flight.heading1 }}</span>
+        <span class="card-heading-1">{{ flight.planetName }}</span>
         <div class="planet-detail">
-          <span class="about-flight">{{ flight.heading2 }}<ion-icon class="circle-icon"
+          <span class="about-flight">{{ flight.code }}<ion-icon class="circle-icon"
               name="radio-button-on"></ion-icon></span>
-          <span class="days">{{ flight.heading3 }}</span>
+          <span class="days">{{ flight.day }} day travel</span>
         </div>
         <div>
-          <span class="price">{{ flight.heading4 }}</span>
-          <span class="trip-way">{{ flight.heading5 }}</span>
+          <span class="price">${{ flight.price }}k</span>
+          <span class="trip-way">{{ flight.type == 1 ? 'One way trip':'Two way trip' }}</span>
         </div>
       </div>
     </div>

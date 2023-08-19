@@ -1,5 +1,5 @@
 <ion-content>
-  <div class="back-button">
+  <div class="back-button" (click)="back()">
     <ion-button size="small" color="secondary">
       <ion-icon name="chevron-back-outline"></ion-icon>
     </ion-button>
@@ -9,13 +9,13 @@
 
   <div class="main-div">
     <div class="root-div">
-      <p>CosmicJet Airlines</p>
-      <span class="plan-name">CJ-2024A712</span>
+      <p>{{selectedShip?.name}}</p>
+      <span class="plan-name">{{selectedShip?.id}}</span>
       <ion-row>
         <ion-col class="from-div" size="3">
-          <span class="from-name">EAR</span>
-          <span class="name">Earth</span>
-          <span class="time">12:30 AM</span>
+          <span class="from-name">{{selectedShip?.fromPlanetCode}}</span>
+          <span class="name">{{selectedShip?.fromPlanet}}</span>
+          <span class="time">{{selectedShip?.arrivalDate.toDate() | date : 'hh:mm a' }}</span>
         </ion-col>
         <ion-col class="center-div" size="6">
           <div class="line-div">
@@ -41,28 +41,27 @@
           </div>
         </ion-col>
         <ion-col class="to-div" size="3">
-          <span class="from-name">MAR</span>
-          <span class="name">Mars</span>
-          <span class="time">08:00 PM</span>
+          <span class="from-name">{{selectedShip?.toPlanetCode}}</span>
+          <span class="name">{{selectedShip?.toPlanet}}</span>
+          <span class="time">{{selectedShip?.arrivalDate.toDate() | date : 'hh:mm a' }}</span>
         </ion-col>
       </ion-row>
     </div>
 
     <div class="button-div">
       <div class="change-btn">
-        <ion-button>Change Flight</ion-button>
+        <!-- <ion-button>Change Flight</ion-button> -->
       </div>
       <div class="price-div">
-        <span class="price">2800k</span>
-        <span class="way-div">Two way round</span>
+        <span class="price">{{selectedShip?.price}}k</span>
+        <span class="way-div">{{ selectedShip?.type == 1 ? 'One way trip':'Two way trip' }}</span>
       </div>
     </div>
   </div>
 
-  <div class="passenger-details-main" *ngFor="let item of passenger">
+  <!-- <div class="passenger-details-main" *ngFor="let item of passenger">
     <div class="image-detail">
       <div class="passenger-image">
-        <!-- <img src="" /> -->
       </div>
       <div class="user-detail">
         <span class="user-name">{{item.name}}</span>
@@ -76,24 +75,24 @@
     <div class="amount-div">
       <span class="amount">{{item.price}}</span>
     </div>
-  </div>
+  </div> -->
 </ion-content>
 
 <ion-footer>
-  <ion-row>
+  <!-- <ion-row>
     <ion-col class="title" size="6">Sub total</ion-col>
     <ion-col class="price" size="6">3900k</ion-col>
-  </ion-row>
-  <ion-row>
+  </ion-row> -->
+  <!-- <ion-row>
     <ion-col class="title" size="6">Discount</ion-col>
     <ion-col class="price" size="6">3900k</ion-col>
-  </ion-row>
-  <div class="border"></div>
+  </ion-row> -->
+  <!-- <div class="border"></div> -->
   <ion-row class="footer-row">
     <ion-col class="total-title" size="6">Total</ion-col>
-    <ion-col class="total-price" size="6">3900k</ion-col>
+    <ion-col class="total-price" size="6">{{selectedShip?.price}}k</ion-col>
   </ion-row>
-  <div class="pay-btn">
+  <div class="pay-btn" (click)="pay()">
     <ion-button>Pay</ion-button>
   </div>
 </ion-footer>

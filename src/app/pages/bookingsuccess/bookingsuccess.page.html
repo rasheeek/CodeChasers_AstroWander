@@ -1,33 +1,40 @@
-<!-- <ion-header [translucent]="true" class="body">
-  <ion-toolbar>
-
-  </ion-toolbar>
-</ion-header> -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-
-<ion-content [fullscreen]="true" class="body">
-  <div class="arrow_back">
-    <img src="../../../assets/icon/arrow_back_ios_new.svg">
+<ion-content>
+  <div class="back-button" (click)="back()">
+    <ion-button size="small" color="secondary">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </ion-button>
   </div>
-  <p class="header">Booking Success</p>
-  <p class="detail">Your flight booked from Earth to Mars success for 2 seats</p>
+  <h1>Booking Success</h1>
+  <p>Your flight booked from Earth to Mars success for 2 seats</p>
 
-  <div class="shape1">
-    <p class="invo">Invoice</p>
-    <div class="head1">
-      <p class="des">Destination</p>
-      <p class="pay">Payment Date</p>
+  <ion-card>
+    <ion-row class="heading">
+      <span class="header">Invoice</span>
+    </ion-row>
+    <ion-row class="details">
+      <ion-col class="destination" size="6">
+         <span class="text-header">Destination</span>
+         <span class="text">Earth to Mars</span>
+      </ion-col>
+      <ion-col class="payment" size="6">
+        <span class="text-header">Payment Date</span>
+        <span class="text">12 August 2023</span>
+      </ion-col>
+    </ion-row>
+    <ion-row class="seat-details">
+      <span class="text-header">Seats</span>
+      <span class="text">2 Seats - Premium Class</span>
+    </ion-row>
+    <ion-row class="order-details">
+      <span class="order-text">Order No. 12222333444555</span>
+    </ion-row>
+    <div class="barcode-image">
+      <img src="../../../assets/icon/Barcode.svg">
     </div>
-    <div class="head2">
-      <p class="ear">Earth to Mars</p>
-      <p class="date">12 August 2023</p>
-    </div>
-    <p class="seats">Seats</p>
-    <p class="prem">2 Seats - Premium Class</p>
-    <p class="order">Order No. 12222333444555</p>
-    <img src="../../../assets/icon/Barcode.svg" class="barcode">
+  </ion-card>
+
+  <div class="btn">
+    <button class="trip-btn" color="secondary" (click)="myTrips()">My Trips</button>
   </div>
-
-  <button class="mytrips">My Trips</button>
 
 </ion-content>

@@ -1,35 +1,32 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { LoginGuard } from './shared/guards/login.guard';
+import { HomeGuard } from './shared/guards/home.guard';
 
 const routes: Routes = [
   {
+
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule),
+    canActivate: [LoginGuard],
   },
   {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+    path: 'tabs',
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule),
+    // canActivate: [HomeGuard],
   },
   {
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
   },
   {
-
-    path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
-  },
-  {
     path: 'register',
-    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule),
+    // canActivate: [LoginGuard],
   },
   {
     path: 'fingerprint',
     loadChildren: () => import('./pages/fingerprint/fingerprint.module').then( m => m.FingerprintPageModule)
-  },
-  {
-    path: 'mytrips',
-    loadChildren: () => import('./pages/mytrips/mytrips.module').then( m => m.MytripsPageModule)
   },
   {
     path: 'bookingsuccess',
@@ -46,10 +43,6 @@ const routes: Routes = [
   {
     path: 'planet-overview',
     loadChildren: () => import('./pages/planet-overview/planet-overview.module').then( m => m.PlanetOverviewPageModule)
-  },
-  {
-    path: 'search-crafts',
-    loadChildren: () => import('./pages/search-crafts/search-crafts.module').then( m => m.SearchCraftsPageModule)
   },
   {
     path: 'add-passengers',
@@ -74,20 +67,15 @@ const routes: Routes = [
   {
      path: 'selected-flight',
     loadChildren: () => import('./pages/selected-flight/selected-flight.module').then( m => m.SelectedFlightPageModule)
-
   },
   {
     path: 'userprofile',
     loadChildren: () => import('./pages/userprofile/userprofile.module').then( m => m.UserprofilePageModule)
+  },
+  {
+    path: 'selected-snack',
+    loadChildren: () => import('./pages/selected-snack/selected-snack.module').then( m => m.SelectedSnackPageModule)
   }
-
-
-
-
-
-
-
-
 
 ];
 

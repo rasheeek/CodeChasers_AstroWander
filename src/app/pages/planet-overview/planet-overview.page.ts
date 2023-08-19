@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
+import { BookingService } from 'src/app/shared/services/booking.service';
+import { PlanetsService } from 'src/app/shared/services/planets.service';
+import { IFlights, IPlanetShip } from 'src/app/shared/types/type.model';
 
 @Component({
   selector: 'app-planet-overview',
@@ -8,6 +13,9 @@ import { Component, OnInit } from '@angular/core';
 export class PlanetOverviewPage implements OnInit {
 
   selectedButtonIndex = 0;
+  flights: IFlights[] = [];
+  planetShips : IPlanetShip[] = [];
+
   images = [
     { backgroundImage: 'jupiter1.jpeg'},
     { backgroundImage: 'jupiter2.jpeg'},
@@ -26,7 +34,7 @@ export class PlanetOverviewPage implements OnInit {
     { backgroundImage: 'details2.png', heading1: 'Celestial Scuba Diving', heading2: '10km from Novastrata City'},
   ];
 
-  flights = [
+  flightsDetails = [
     { backgroundImage: 'plutoflight.png', heading1: 'Pluto', heading2: 'Air Shuttle 150 ', heading3: '1 day travel ', heading4: '$1750k', heading5: 'Two way trip' },
     { backgroundImage: 'mercuryflight.png', heading1: 'Mercury', heading2: 'Air Shuttle 01 ', heading3: '1 day travel ', heading4: '$8500k', heading5: 'Two way trip'  },
     { backgroundImage: 'plutoflight.png', heading1: 'Mars', heading2: 'Air Shuttle 150', heading3: '1 day travel ', heading4: '$1750k', heading5: 'Two way trip'  },
@@ -38,9 +46,55 @@ export class PlanetOverviewPage implements OnInit {
     { backgroundImage: 'mercuryflight.png', heading1: 'Earth', heading2: 'Air Shuttle 150', heading3: '1 day travel ', heading4: '$1750k', heading5: 'Two way trip'  },
   ];
 
-  constructor() { }
+  cards = [
+    { companyName: 'CosmicJet Airlines', flightCode: 'CJ-2024A712', price: '2800k', way: 'Two way round' },
+    { companyName: 'NebulaAir Voyages', flightCode: 'NV-3056B934', price: '3100k', way: 'Two way round' },
+    { companyName: 'StarHopper Excursion', flightCode: 'SH-4028C587', price: '4900k', way: 'Two way round' },
+    { companyName: 'AstroBreeze Airlines', flightCode: 'AB-7034F109', price: '5100k', way: 'Two way round' },
+  ];
+
+  constructor(
+    private router: Router,
+    private planetService : PlanetsService,
+    private loadingCtrl : LoadingController,
+    private bookingService : BookingService,
+  ) { }
 
   ngOnInit() {
+    this.loadingCtrl.create().then(loadingEl => {
+      loadingEl.present();
+      this.planetService.getAllFlights().subscribe(res=> {
+        console.log("res", res);
+        
+        this.flights = res;
+        loadingEl.dismiss();
+      }, (err=>{
+        loadingEl.dismiss();
+      }))
+    });
+
+    this.loadingCtrl.create().then(loadingEl=>{
+      loadingEl.present();
+      this.bookingService.getAllShips().subscribe(res=>{
+        console.log("All ships", res);
+        this.planetShips = res;
+        loadingEl.dismiss();
+      },(err=>{
+        loadingEl.dismiss();
+      }))
+    })
+  }
+
+  back(){
+    this.router.navigate(['/tabs/home'])
+  }
+
+  book(){
+    this.router.navigate(['/selected-flight'])
+  }
+
+  toggleSelectedButtonIndex(index: number) {
+    this.selectedButtonIndex = index;
   }
 
 }

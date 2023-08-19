@@ -22,7 +22,7 @@ export class HomeGuard implements CanActivate {
     | Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree> {
     if (!localStorage.getItem("id")) {
-      this.router.navigateByUrl("/walkthrough");
+      this.router.navigateByUrl("/login");
       return false;
     }
     return true;

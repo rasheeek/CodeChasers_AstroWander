@@ -1,22 +1,22 @@
-<ion-content [fullscreen]="true">
-  <div class="back-button">
+<ion-content [fullscreen]="true" mode="md">
+  <div class="back-button" (click)="back()">
     <ion-button size="small" color="secondary">
       <ion-icon name="chevron-back-outline"></ion-icon>
     </ion-button>
   </div>
   <div class="h1-class">
-    <span class="h1">From Earth to <br> Jupiter</span>
+    <span class="h1">From {{selectedShip?.fromPlanet}} to <br> {{selectedShip?.toPlanet}}</span>
   </div>
   <div class="main-div">
     <div class="root-div">
-      <p>CosmicJet Airlines</p>
-      <span class="plan-name">CJ-2024A712</span>
+      <p>{{selectedShip?.name}}</p>
+      <span class="plan-name">{{selectedShip?.id}}</span>
       <ion-img class="save-img" src="../../../assets/Save-btn.png"></ion-img>
       <ion-row>
         <ion-col class="from-div" size="3">
-          <span class="from-name">EAR</span>
-          <span class="name">Earth</span>
-          <span class="time">12:30 AM</span>
+          <span class="from-name">{{selectedShip?.fromPlanetCode}}</span>
+          <span class="name">{{selectedShip?.fromPlanet}}</span>
+          <span class="time">{{selectedShip?.arrivalDate.toDate() | date : 'hh:mm a' }}</span>
         </ion-col>
         <ion-col class="center-div" size="6">
           <div class="line-div">
@@ -42,9 +42,9 @@
           </div>
         </ion-col>
         <ion-col class="to-div" size="3">
-          <span class="from-name">JUP</span>
-          <span class="name">Jupiter</span>
-          <span class="time">08:00 PM</span>
+          <span class="from-name">{{selectedShip?.toPlanetCode}}</span>
+          <span class="name">{{selectedShip?.toPlanet}}</span>
+          <span class="time">{{selectedShip?.arrivalDate.toDate() | date : 'hh:mm a' }}</span>
         </ion-col>
       </ion-row>
     </div>
@@ -58,12 +58,12 @@
       </div>
     </div>
       <div class="user-quantity">
-        <div class="add-remove-btn">-</div>
+        <div (click)="removePassenger(item)"  class="add-remove-btn">-</div> 
         <span class="value">{{item.quantity}}</span>
-        <div class="add-remove-btn">+</div>
+        <div (click)="addPassenger(item)" class="add-remove-btn">+</div>
       </div>
   </div>
-  <div class="button-container">
+  <div class="button-container" (click)="continue()">
     <ion-button>Continue</ion-button>
   </div>
 </ion-content>

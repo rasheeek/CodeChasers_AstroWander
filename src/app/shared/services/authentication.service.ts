@@ -15,7 +15,7 @@ import { UserService } from "./user.service";
 export class AuthenticationService {
   userSubscription: any = new Subscription();
   fisrtTime: boolean = true;
-  
+
   userDetails : BehaviorSubject<any> = new BehaviorSubject<any>(null);
 
   constructor(
@@ -32,7 +32,7 @@ export class AuthenticationService {
       if (user) {
         console.log("logged in", user);
         that.listenToUser(user.uid, user.email? user.email : '');
-       
+
       } else {
         that.ngZone.run(() => {
           if (!that.fisrtTime) {
