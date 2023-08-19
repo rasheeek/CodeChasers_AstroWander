@@ -21,12 +21,12 @@
   <div class="search-container">
     <div class="searchbar-container">
       <ion-img class="rocket-img" src="../../../assets/calendar_month.png"></ion-img>
-      <input class="search-input" type="text" placeholder="01/02/2149" id="startDate" [(ngModel)]="occasionStartDate">
+      <input [value]="startDateVal" class="search-input" type="text" placeholder="01/02/2149" id="startDate" >
       <ion-img class="add-img" src="../../../assets/arrow_drop_down.png"></ion-img>
     </div>
     <div class="searchbar-container">
       <ion-img class="rocket-img" src="../../../assets/calendar_month.png"></ion-img>
-      <input class="search-input" type="text" placeholder="01/02/2149" id="endDate" [(ngModel)]="occasionEndDate">
+      <input [value]="endDateVal" readonly  class="search-input" type="text" placeholder="01/02/2149" id="endDate" >
       <ion-img class="add-img" src="../../../assets/arrow_drop_down.png"></ion-img>
     </div>
     <ion-img class="search-img" src="../../../assets/search.png"></ion-img>
@@ -34,7 +34,7 @@
   <ion-modal class="datetime-modal" trigger="startDate">
     <ng-template>
       <ion-content>
-        <ion-datetime size="cover" (ngModel)="occasionStartDate" (ionChange)="setStartDate(datetimeId.value)"
+        <ion-datetime presentation="date" size="cover" [(ngModel)]="occasionStartDate" (ionChange)="setStartDate(occasionStartDate)"
           #datetimeId show-default-buttons="true" show-default-time-label="false" display-format="YYYY/MM/DD">
         </ion-datetime>
       </ion-content>
@@ -43,7 +43,7 @@
   <ion-modal class="datetime-modal" trigger="endDate">
     <ng-template>
       <ion-content>
-        <ion-datetime size="cover" (ngModel)="occasionEndDate" (ionChange)="setEndDate(datetimeId.value)"
+        <ion-datetime presentation="date" size="cover" [(ngModel)]="occasionEndDate" (ionChange)="setEndDate(occasionEndDate)"
           #datetimeId show-default-buttons="true" show-default-time-label="false" display-format="YYYY/MM/DD">
         </ion-datetime>
       </ion-content>
