@@ -68,6 +68,8 @@ export class PaymentPage implements OnInit {
         noOfInfants: this.noOfInfants,
         shipId: this.selectedShip.id as string,
         uid: this.userDetails.uid,
+        fromPlanet: this.selectedShip.fromPlanet,
+        toPlanet: this.selectedShip.toPlanet,
       };
 
       this.bookingService.addBooking(data).subscribe((res) => {

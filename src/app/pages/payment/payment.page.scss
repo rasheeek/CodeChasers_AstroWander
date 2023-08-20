@@ -34,12 +34,13 @@
 }
 
 .shape1 {
-    width: 350px;
+    width: auto;
     height: 250px;
     flex-shrink: 0;
     border-radius: 25px;
     background: rgba(18, 23, 29, 0.55);
-    margin: 20px auto auto auto;
+    margin: 20px ;
+    // text-align: start;
 }
 
 .des {

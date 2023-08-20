@@ -38,4 +38,6 @@ export interface IBooking{
     noOfChildren : number,
     noOfInfants : number,
     shipId : string, 
+    fromPlanet: string,
+    toPlanet: string,
 }

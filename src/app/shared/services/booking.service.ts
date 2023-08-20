@@ -10,6 +10,7 @@ export class BookingService {
   collectionName = 'planet_ships';
   bookingCollectionName = 'bookings';
   selectedShip: IPlanetShip | null = null;
+  bookings: IBooking | null = null;
 
   noOfAdults: number = 0;
   noOfChildren: number = 0;
@@ -48,4 +49,19 @@ export class BookingService {
         });
     });
   }
+
+  getUserBookings(userId: string): Observable<IBooking[]> {
+    return this.afs
+      .collection<IBooking>(this.bookingCollectionName, (ref) =>
+        ref.where('uid', '==', userId)
+      )
+      .valueChanges();
+  }
+
+  getShipDetails(shipId: string): Observable<IPlanetShip | undefined> {
+    return this.afs
+      .doc<IPlanetShip>(`${this.collectionName}/${shipId}`)
+      .valueChanges();
+  }
+  
 }

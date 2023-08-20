@@ -8,7 +8,7 @@ import { map } from 'rxjs';
 })
 export class PlanetsService {
   collectionName = 'planets';
-  flightCollectionName = 'flight_details';
+  flightCollectionName = 'flights';
 
   constructor(
     private afs: AngularFirestore
@@ -21,7 +21,6 @@ export class PlanetsService {
       .pipe(
         map((actions) =>
           actions.map((a) => {
-            console.log("a",a);
             
             const data = a.payload.doc.data() as IPlanet;
             const id = a.payload.doc.id;
@@ -38,7 +37,6 @@ export class PlanetsService {
       .pipe(
         map((actions) =>
           actions.map((a) => {
-            console.log("a",a);
             
             const data = a.payload.doc.data() as IFlights;
             const id = a.payload.doc.id;

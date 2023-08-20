@@ -48,7 +48,6 @@ export class HomePage implements OnInit {
     this.loadingCtrl.create().then(loadingEl => {
       loadingEl.present();
       this.planetService.getAllPlanets().subscribe(res=> {
-        console.log("res", res);
         
         this.planets = res;
         loadingEl.dismiss();
@@ -59,9 +58,7 @@ export class HomePage implements OnInit {
 
     this.loadingCtrl.create().then(loadingEl => {
       loadingEl.present();
-      this.planetService.getAllFlights().subscribe(res=> {
-        console.log("res", res);
-        
+      this.planetService.getAllFlights().subscribe(res=> {        
         this.flights = res;
         loadingEl.dismiss();
       }, (err=>{

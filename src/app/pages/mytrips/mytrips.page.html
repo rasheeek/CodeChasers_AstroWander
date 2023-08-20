@@ -6,10 +6,40 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
 <ion-content [fullscreen]="true" class="body">
-  <p class="header">Astro Odysseys</p>
+  <div class="back-button" (click)="back()">
+    <ion-button size="small" color="secondary">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </ion-button>
+  </div>
+  <p class="header-main">Astro Odysseys</p>
 
   <img src="../../../assets/icon/Ellipse 9.svg" class="profile">
-  <div class="shape1">
+  <ion-card *ngFor="let userBooking of userBookings">
+    <ion-row class="heading">
+      <span class="header">Invoice</span>
+    </ion-row>
+    <ion-row class="details">
+      <ion-col class="destination" size="6">
+         <span class="text-header">Destination</span>
+         <span class="text">{{userBooking.fromPlanet}} to {{userBooking.toPlanet}}</span>
+      </ion-col>
+      <ion-col class="payment" size="6">
+        <span class="text-header">Payment Date</span>
+        <span class="text">{{userBooking.addedDate.toDate() | date : 'yyyy-MM-dd' }}</span>
+      </ion-col>
+    </ion-row>
+    <ion-row class="seat-details">
+      <span class="text-header">Seats</span>
+      <span class="text">{{userBooking.noOfAdults + userBooking.noOfChildren}} Seats - Premium Class</span>
+    </ion-row>
+    <ion-row class="order-details">
+      <span class="order-text">Order No. 12222333444555</span>
+    </ion-row>
+    <div class="barcode-image">
+      <img src="../../../assets/icon/Barcode.svg">
+    </div>
+  </ion-card>
+  <!-- <div class="shape1" *ngFor="let userBooking of userBookings">
     <p class="invo">Invoice</p>
     <div class="head1">
       <p class="des">Destination</p>
@@ -17,27 +47,11 @@
     </div>
     <div class="head2">
       <p class="ear">Earth to Mars</p>
-      <p class="date">12 August 2023</p>
+      <p class="date">{{userBooking.addedDate.toDate() | date : 'yyyy-MM-dd' }}</p>
     </div>
     <p class="seats">Seats</p>
-    <p class="prem">2 Seats - Premium Class</p>
+    <p class="prem">{{userBooking.noOfAdults + userBooking.noOfChildren}} Seats - Premium Class</p>
     <p class="order">Order No. 12222333444555</p>
     <img src="../../../assets/icon/Barcode.svg" class="barcode">
-  </div>
-  <div class="shape2">
-    <p class="invo">Invoice</p>
-    <div class="head1">
-      <p class="des">Destination</p>
-      <p class="pay">Payment Date</p>
-    </div>
-    <div class="head2">
-      <p class="ear">Earth to Mars</p>
-      <p class="date">12 August 2023</p>
-    </div>
-    <p class="seats">Seats</p>
-    <p class="prem">2 Seats - Premium Class</p>
-    <p class="order">Order No. 12222333444555</p>
-    <img src="../../../assets/icon/Barcode.svg" class="barcode">
-  </div>
-
+  </div> -->
 </ion-content>
