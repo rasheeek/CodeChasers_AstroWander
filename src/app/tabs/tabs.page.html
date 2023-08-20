@@ -1,19 +1,25 @@
 <ion-tabs>
-
+  <ion-fab [class]="isCenterBtnSelected?'center-btn-selected':'center-btn'" vertical="bottom" horizontal="center" slot="fixed" translate="true">
+    <ion-fab-button routerLink="" size="large">
+      <ion-icon class="rocket-icon" name="rocket-outline"></ion-icon>
+      <!-- <ion-img class="rocket" src="../../assets/Group 2906.png"></ion-img> -->
+    </ion-fab-button>
+  </ion-fab>
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="home">
-      <ion-icon aria-hidden="true" name="home"></ion-icon>
+      <ion-icon aria-hidden="true" name="home-outline"></ion-icon>
     </ion-tab-button>
 
     <ion-tab-button tab="mytrips">
       <ion-icon aria-hidden="true" name="menu"></ion-icon>
     </ion-tab-button>
 
-    <ion-tab-button tab="main">
-      <div class="icon-container">
+    <!-- <ion-tab-button tab="main"> -->
+    <ion-tab-button>
+      <!-- <div class="icon-container">
         <ion-img class="eclips" src="../../assets/Ellipse 7.png"></ion-img>
         <ion-img class="rocket" src="../../assets/Group 2906.png"></ion-img>
-      </div>
+      </div> -->
     </ion-tab-button>
 
     <ion-tab-button tab="search-crafts">
@@ -21,7 +27,7 @@
     </ion-tab-button>
 
     <ion-tab-button tab="profile">
-      <ion-icon aria-hidden="true" name="person"></ion-icon>
+      <ion-icon aria-hidden="true" name="person-outline"></ion-icon>
     </ion-tab-button>
 
   </ion-tab-bar>
