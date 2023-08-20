@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "baylanka_planetTravel",
+	"appId": "baylanka.astrowander",
+	"appName": "AstroWander",
 	"webDir": "www",
 	"server": {
 		"androidScheme": "https"

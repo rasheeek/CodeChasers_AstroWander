@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LoadingController, ModalController } from '@ionic/angular';
 import { BookingService } from 'src/app/shared/services/booking.service';
 import { ScanMedicalPage } from '../scan-medical/scan-medical.page';
@@ -28,9 +28,35 @@ export class AddPassengersPage implements OnInit {
     private modalCtrl : ModalController,
     private loadingCtrl : LoadingController,
     private userService : UserService,
-    private alertService : AlertService
+    private alertService : AlertService,
+    private route : ActivatedRoute
 
-  ) { }
+  ) { 
+    this.route.queryParams.subscribe((res) => {
+      let isScanned = res['isScanned'];
+      if(isScanned){
+        this.loadingCtrl.create().then(loadingEl=>{
+
+          loadingEl.present();
+          this.userService.getUserDetailsById(this.bookingService.scannedId).subscribe(res=>{
+            if(res && res.name){
+              let array = this.bookingService.scanningArray;
+              let index = this.bookingService.scanningIndex;
+                array[index].name  = res.name;
+                array[index].age  = res.age;
+                array[index].isScanned  = true;
+            }else{
+              this.alertService.showAlert("Error", "Invalid QR", ['Okay'])
+            }
+            loadingEl.dismiss();
+          },(err=>{
+            this.alertService.showAlert("Error", "Invalid QR", ['Okay'])
+          }))
+
+        })
+      }
+    })
+  }
 
   ngOnInit() {
   }
@@ -67,31 +93,24 @@ export class AddPassengersPage implements OnInit {
 
 
   async openQR(array : any, index : number){
-    const modal = await this.modalCtrl.create({
-      component : ScanMedicalPage
-    })
-    modal.onDidDismiss().then(data=>{
-        if(data.data){
-          this.loadingCtrl.create().then(loadingEl=>{
 
-            loadingEl.present();
-            this.userService.getUserDetailsById(data.data).subscribe(res=>{
-              if(res && res.name){
-                  array[index].name  = res.name;
-                  array[index].age  = res.age;
-                  array[index].isScanned  = true;
-              }else{
-                this.alertService.showAlert("Error", "Invalid QR", ['Okay'])
-              }
-              loadingEl.dismiss();
-            },(err=>{
-              this.alertService.showAlert("Error", "Invalid QR", ['Okay'])
-            }))
 
-          })
-        }
-    })
-    modal.present();
+    this.bookingService.scanningArray = array;
+    this.bookingService.scanningIndex = index;
+
+    this.router.navigate(['/scan']);
+
+
+
+    // const modal = await this.modalCtrl.create({
+    //   component : ScanMedicalPage
+    // })
+    // modal.onDidDismiss().then(data=>{
+    //     if(data.data){
+     
+    //     }
+    // })
+    // modal.present();
   }
 
 

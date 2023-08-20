@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">baylanka_planetTravel</string>
-    <string name="title_activity_main">baylanka_planetTravel</string>
-    <string name="package_name">io.ionic.starter</string>
-    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="app_name">AstroWander</string>
+    <string name="title_activity_main">AstroWander</string>
+    <string name="package_name">baylanka.astrowander</string>
+    <string name="custom_url_scheme">baylanka.astrowander</string>
 </resources>

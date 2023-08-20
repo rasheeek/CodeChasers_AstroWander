@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package baylanka.astrowander;
 
 import com.getcapacitor.BridgeActivity;
 

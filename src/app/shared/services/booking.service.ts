@@ -18,6 +18,10 @@ export class BookingService {
 
   bookingId : string = '';
 
+  scanningArray : any;
+  scanningIndex : number = 0;
+  scannedId : string = '';
+
   constructor(private afs: AngularFirestore) {}
 
   getAllShips() {
@@ -53,7 +57,7 @@ export class BookingService {
   getUserBookings(userId: string): Observable<IBooking[]> {
     return this.afs
       .collection(this.bookingCollectionName, (ref) =>
-      ref.where('uid', '==', userId).orderBy("addedBy", "desc")
+      ref.where('uid', '==', userId).orderBy("addedDate", "desc")
       )
       .snapshotChanges()
       .pipe(

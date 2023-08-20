@@ -79,6 +79,10 @@ const routes: Routes = [
   {
     path: 'mytrips',
     loadChildren: () => import('./pages/mytrips/mytrips.module').then( m => m.MytripsPageModule)
+  },
+  {
+    path: 'scan',
+    loadChildren: () => import('./pages/scan/scan.module').then( m => m.ScanPageModule)
   }
 
 ];
