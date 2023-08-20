@@ -1,26 +1,65 @@
-ion-tab-button{
-    --color-selected: #C147E9;
-}
+ion-tabs{
+    background: #73298C;
+    ion-tab-bar {
+        background: #FFFFFF;
+        border: 0;
+        margin-top: -1px;
+        border-radius: 25px 25px 0px 0px;
+        padding: 7px;
+        // padding-bottom: 20px;
 
-.icon-container {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 32px;
-}
+        ion-tab-button{
+            background: transparent !important;
+            --color-selected: #C147E9;
+        }
+      }
 
-.eclips {
-    position: relative;
-    z-index: 1;
-    width: 72px;
-    height: 72px;
-}
-
-.rocket {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 40px;
-    height: 40px;
+      .center-btn{
+        // --background: var(--ion-color-primary);
+        margin: 0px 0px 23px -35px;
+        ion-fab-button::part(native) {
+            background-color: #2D033B;
+            --background-activated: #2D033B;
+            box-shadow: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.23));
+            padding: 20px;
+            width: 72px;
+            height: 72px;
+            color: #E5B8F4;
+          }
+      }
+      .center-btn-selected{
+        // --background: var(--ion-color-primary);
+        margin: 0px 0px 20px -35px;
+        ion-fab-button::part(native) {
+            background-color: #E5B8F4;
+            --background-activated: #E5B8F4;
+            box-shadow: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.23));
+            padding: 20px;
+            width: 72px;
+            height: 72px;
+            color: #2D033B;
+          }
+      }
+    //   .icon-container {
+    //       position: relative;
+    //       display: inline-block;
+    //       margin-bottom: 32px;
+    //   }
+      
+    //   .eclips {
+    //       position: relative;
+    //       z-index: 1;
+    //       width: 72px;
+    //       height: 72px;
+    //   }
+      
+      .rocket {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 2;
+          width: 40px;
+          height: 40px;
+      }
 }
