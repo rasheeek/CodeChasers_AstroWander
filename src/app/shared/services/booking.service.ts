@@ -18,9 +18,8 @@ export class BookingService {
 
   bookingId : string = '';
 
-  scanningArray : any;
-  scanningIndex : number = 0;
-  scannedId : string = '';
+
+  scannedId : any = '';
 
   constructor(private afs: AngularFirestore) {}
 

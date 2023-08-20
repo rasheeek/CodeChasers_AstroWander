@@ -19,7 +19,7 @@
       <ion-button *ngIf="item.isScanned"   [color]=" 'secondary'" icon-only slot="end">
         <ion-icon name="checkmark"></ion-icon>
       </ion-button>
-      <ion-button (click)="openQR(adults, i)"  *ngIf="!item.isScanned"  [color]="'primary'" icon-only slot="end">
+      <ion-button (click)="openQR(1, i)"  *ngIf="!item.isScanned"  [color]="'primary'" icon-only slot="end">
        Scan
       </ion-button>
     </ion-item>
@@ -39,7 +39,7 @@
       <ion-button *ngIf="item.isScanned"   [color]=" 'secondary'" icon-only slot="end">
         <ion-icon name="checkmark"></ion-icon>
       </ion-button>
-      <ion-button (click)="openQR(adults, i)" *ngIf="!item.isScanned"  [color]="'primary'" icon-only slot="end">
+      <ion-button (click)="openQR(2, i)" *ngIf="!item.isScanned"  [color]="'primary'" icon-only slot="end">
        Scan
       </ion-button>
     </ion-item>
@@ -58,7 +58,7 @@
       <ion-button *ngIf="item.isScanned"   [color]=" 'secondary'" icon-only slot="end">
         <ion-icon name="checkmark"></ion-icon>
       </ion-button>
-      <ion-button (click)="openQR(adults, i)" *ngIf="!item.isScanned"  [color]="'primary'" icon-only slot="end">
+      <ion-button (click)="openQR(3, i)" *ngIf="!item.isScanned"  [color]="'primary'" icon-only slot="end">
        Scan
       </ion-button>
     </ion-item>

@@ -22,6 +22,10 @@ export class AddPassengersPage implements OnInit {
   infants : any[] = [];
   children : any[] = [];
 
+
+  scanningArray : any;
+  scanningIndex : number = 0;
+
   constructor(
     private router: Router,
     private bookingService : BookingService,
@@ -40,8 +44,17 @@ export class AddPassengersPage implements OnInit {
           loadingEl.present();
           this.userService.getUserDetailsById(this.bookingService.scannedId).subscribe(res=>{
             if(res && res.name){
-              let array = this.bookingService.scanningArray;
-              let index = this.bookingService.scanningIndex;
+              console.log("Loaded user details", res);
+              let array;
+              if(this.scanningArray == 1){
+                array = this.adults;
+              }else if(this,this.scanningArray == 2){
+                array = this.children;
+              }else{
+                array = this.infants;
+              }
+
+              let index = this.scanningIndex;
                 array[index].name  = res.name;
                 array[index].age  = res.age;
                 array[index].isScanned  = true;
@@ -84,7 +97,7 @@ export class AddPassengersPage implements OnInit {
   }
 
   scan(){
-    this.router.navigate(['/scan-medical']);
+    this.router.navigate(['/scan']);
   }
 
   confirmDetails(){
@@ -92,12 +105,11 @@ export class AddPassengersPage implements OnInit {
   }
 
 
-  async openQR(array : any, index : number){
+  async openQR(array : number, index : number){
 
 
-    this.bookingService.scanningArray = array;
-    this.bookingService.scanningIndex = index;
-
+    this.scanningArray = array;
+    this.scanningIndex = index;
     this.router.navigate(['/scan']);
 
 
