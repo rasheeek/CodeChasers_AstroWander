@@ -36,7 +36,7 @@ export class MytripsPage implements OnInit {
       this.userBookings = bookings;
       console.log(bookings);
       
-    });
+    },(error) => console.log(error));
   }
 
   back(){

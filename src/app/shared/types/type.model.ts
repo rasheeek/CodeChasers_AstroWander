@@ -40,4 +40,5 @@ export interface IBooking{
     shipId : string, 
     fromPlanet: string,
     toPlanet: string,
+    id?: string,
 }

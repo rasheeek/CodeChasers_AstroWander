@@ -52,16 +52,19 @@ export class BookingService {
 
   getUserBookings(userId: string): Observable<IBooking[]> {
     return this.afs
-      .collection<IBooking>(this.bookingCollectionName, (ref) =>
-        ref.where('uid', '==', userId)
+      .collection(this.bookingCollectionName, (ref) =>
+      ref.where('uid', '==', userId).orderBy("addedBy", "desc")
       )
-      .valueChanges();
-  }
-
-  getShipDetails(shipId: string): Observable<IPlanetShip | undefined> {
-    return this.afs
-      .doc<IPlanetShip>(`${this.collectionName}/${shipId}`)
-      .valueChanges();
+      .snapshotChanges()
+      .pipe(
+        map((actions) =>
+          actions.map((a) => {
+            const data = a.payload.doc.data() as IBooking;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          })
+        )
+      );
   }
   
 }
